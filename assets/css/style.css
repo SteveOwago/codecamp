@@ -2476,6 +2476,204 @@ html.menu-opened body {
     bottom: 0;
     z-index: -1;
 }
+.banner-section-course-java {
+	position: relative;
+	background: url(../img/java-coding-header.jpg);
+	background-position: 50% 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.banner-section-course-java:after {
+	content: "";
+	position: absolute;
+	background: rgba(19, 19, 19, 0.75);
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+.banner-section-course-javascript {
+	position: relative;
+	background: url(../img/javascript-coding-header.jpg);
+	background-position: 50% 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.banner-section-course-javascript:after {
+	content: "";
+	position: absolute;
+	background: rgba(19, 19, 19, 0.75);
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+.banner-section-course-blender {
+	position: relative;
+	background: url(../img/blender-design-header.jpg);
+	background-position: 50% 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.banner-section-course-blender:after {
+	content: "";
+	position: absolute;
+	background: rgba(19, 19, 19, 0.75);
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+.banner-section-course-cplusplus {
+	position: relative;
+	background: url(../img/scratch-header.jpg);
+	background-position: 50% 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.banner-section-course-cplusplus:after {
+	content: "";
+	position: absolute;
+	background: rgba(19, 19, 19, 0.75);
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+.banner-section-course-unity {
+	position: relative;
+	background: url(../img/scratch-header.jpg);
+	background-position: 50% 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.banner-section-course-unity:after {
+	content: "";
+	position: absolute;
+	background: rgba(19, 19, 19, 0.75);
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+.banner-section-course-minecraft {
+	position: relative;
+	background: url(../img/scratch-header.jpg);
+	background-position: 50% 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.banner-section-course-minecraft:after {
+	content: "";
+	position: absolute;
+	background: rgba(19, 19, 19, 0.75);
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+.banner-section-course-maya {
+	position: relative;
+	background: url(../img/maya-coding-header.jpg);
+	background-position: 50% 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.banner-section-course-maya:after {
+	content: "";
+	position: absolute;
+	background: rgba(19, 19, 19, 0.75);
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+.banner-section-course-python {
+	position: relative;
+	background: url(../img/python-coding-header.jpg);
+	background-position: 50% 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.banner-section-course-python:after {
+	content: "";
+	position: absolute;
+	background: rgba(19, 19, 19, 0.75);
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+.banner-section-course-roblox {
+	position: relative;
+	background: url(../img/roblox-coding-header.jpg);
+	background-position: 50% 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.banner-section-course-roblox:after {
+	content: "";
+	position: absolute;
+	background: rgba(19, 19, 19, 0.75);
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+.banner-section-course-premiere {
+	position: relative;
+	background: url(../img/premiere-course-header.jpg);
+	background-position: 50% 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.banner-section-course-premiere:after {
+	content: "";
+	position: absolute;
+	background: rgba(19, 19, 19, 0.75);
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+.banner-section-course-3d-printing {
+	position: relative;
+	background: url(../img/scratch-header.jpg);
+	background-position: 50% 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.banner-section-course-3d-printing:after {
+	content: "";
+	position: absolute;
+	background: rgba(19, 19, 19, 0.75);
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
 .banner-img img {
 	width: 490px;
 	display: block;
