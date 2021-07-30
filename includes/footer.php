@@ -31,7 +31,8 @@
 								<div class="footer-widget footer-about">
 									<h2 class="footer-title">About IEARNKENYA</h2>
 									<div class="footer-about-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat mauris Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat mauris </p>
+										<p>iEARN(International Education and Resource Network)is a network of educators who are passionate about using technology to enhance global collaborations and transformative teaching and learning. 
+											iEARN empowers educators and young people to work together online using the Internet and other new technologies.</p>
 									</div>
 								</div>
 								<!-- /Footer Widget -->
@@ -41,13 +42,13 @@
 							
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-menu">
-									<h2 class="footer-title">For Mentee</h2>
+									<h2 class="footer-title">For Designers and Game Developers</h2>
 									<ul>
-										<li><a href="search.html">Search Mentors</a></li>
-										<li><a href="login.php">Login</a></li>
-										<li><a href="register.php">Register</a></li>
-										<li><a href="booking.html">Booking</a></li>
-										<li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
+										<li><a href="roblox">Roblox</a></li>
+										<li><a href="minecraft.php">Minecraft</a></li>
+										<li><a href="blender.php">Blender</a></li>
+										<li><a href="maya.php">Autodesk Maya</a></li>
+										<li><a href="premiere.php">Adobe Premiere</a></li>
 									</ul>
 								</div>
 								<!-- /Footer Widget -->
@@ -57,13 +58,13 @@
 							
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-menu">
-									<h2 class="footer-title">For Mentors</h2>
+									<h2 class="footer-title">For Coders</h2>
 									<ul>
-										<li><a href="appointments.html">Appointments</a></li>
-										<li><a href="chat.html">Chat</a></li>
-										<li><a href="login.html">Login</a></li>
-										<li><a href="register.html">Register</a></li>
-										<li><a href="dashboard.html">Mentor Dashboard</a></li>
+										<li><a href="python.php">Python</a></li>
+										<li><a href="java.php">Java</a></li>
+										<li><a href="javascript.php">JavaScript</a></li>
+										<li><a href="scratch.php">Scratch</a></li>
+										<li><a href="c++.php">C++</a></li>
 									</ul>
 								</div>
 								<!-- /Footer Widget -->
@@ -73,7 +74,7 @@
 							
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-social">
-									<h2 class="footer-title">Instagram</h2>
+									<h2 class="footer-title">Gallery and Media</h2>
 									<div class="footer-social-info d-block">
 										<div class="footer-insta-info">
 											<div><img src="assets/img/course/1.jpg" alt="" class="img-fluid"></div>
@@ -110,7 +111,7 @@
 								</div>
 								<div class="col-md-6 col-12">
 									<div class="copyright-text text-md-right">
-										<p>&copy; 2020 Mentoring. All rights reserved.</p>
+										<p>&copy; 2021 iEARN KENYA. All rights reserved.</p>
 									</div>
 								</div>
 							</div>

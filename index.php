@@ -24,7 +24,7 @@
 				<div class="container">
 					<div class="banner-content text-center">
 						<div class="banner-heading">
-							<h2>ONLINE CODING SESSIONS</h2>
+							<h2>INNOVATION ACADEMY</h2>
 							<p>Shape Your Future Learning New Skills</p>
 						</div>
 						<!-- <div class="banner-forms">
@@ -166,7 +166,7 @@
 					<div class="section-heading d-flex align-items-center">
 						<div class="heading-content">
 							<h2><span class="text-weight">Popular</span> Courses <span class="header-right"></span></h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<p>Learn From Our Trending Courses</p>
 						</div> 
 					</div>
 					<div class="row">
@@ -174,10 +174,10 @@
 							<div class="popular-course">
 								<div class="courses-head">
 									<div class="courses-img-main">
-										<img src="assets/img/course/c8.jpg" alt="" class="img-fluid w-100">
+										<img src="assets/img/course/scratch.jpg" alt="" class="img-fluid w-100">
 									</div>
 									<div class="courses-aut-img">
-										<img src="assets/img/user/user.png" alt="">
+										<img src="assets/img/iearnlogosmall1.png" alt="">
 									</div>
 								</div>
 								<div class="courses-body">
@@ -194,8 +194,8 @@
 											<li>	<i class="fas fa-star not-checked"></i> 
 											</li>
 										</ul>
-										<p class="mb-1">Hinata Hyuga</p>
-										<h4 class="mb-0">Introduction Learn – LMS plugin</h4>
+										<p class="mb-1">IEARN KENYA</p>
+										<h4 class="mb-0">Block Based Coding – Scratch</h4>
 									</div>
 								</div>
 								<div class="courses-border"></div>
@@ -207,7 +207,7 @@
 										</ul>
 									</div>
 									<div class="courses-amt ml-auto">
-										<h3 class="mb-0">$200</h3>
+										<h3 class="mb-0">KES: 15000</h3>
 									</div>
 								</div>
 							</div>
@@ -216,10 +216,10 @@
 							<div class="popular-course">
 								<div class="courses-head">
 									<div class="courses-img-main">
-										<img src="assets/img/course/c9.jpg" alt="" class="img-fluid w-100">
+										<img src="assets/img/course/java.jpg" alt="" class="img-fluid w-100">
 									</div>
 									<div class="courses-aut-img">
-										<img src="assets/img/user/user8.jpg" alt="">
+										<img src="assets/img/iearnlogosmall1.png" alt="">
 									</div>
 								</div>
 								<div class="courses-body">
@@ -236,20 +236,20 @@
 											<li>	<i class="fas fa-star not-checked"></i> 
 											</li>
 										</ul>
-										<p class="mb-1">Keny White</p>
-										<h4 class="mb-0">From Zero to Hero with Nodejs</h4>
+										<p class="mb-1">IEARN KENYA</p>
+										<h4 class="mb-0">Mobile App Development – Java</h4>
 									</div>
 								</div>
 								<div class="courses-border"></div>
 								<div class="courses-footer d-flex align-items-center">
 									<div class="courses-count">
 										<ul class="mb-0">
-											<li><i class="fas fa-user-graduate mr-1"></i> 125</li>
-											<li><i class="far fa-file-alt mr-1"></i>3</li>
+											<li><i class="fas fa-user-graduate mr-1"></i> 85</li>
+											<li><i class="far fa-file-alt mr-1"></i>5</li>
 										</ul>
 									</div>
 									<div class="courses-amt ml-auto">
-										<h3 class="mb-0">$380</h3>
+										<h3 class="mb-0">KES: 15000</h3>
 									</div>
 								</div>
 							</div>
@@ -258,10 +258,10 @@
 							<div class="popular-course">
 								<div class="courses-head">
 									<div class="courses-img-main">
-										<img src="assets/img/course/c10.jpg" alt="" class="img-fluid w-100">
+										<img src="assets/img/course/javascript.jpg" alt="" class="img-fluid w-100">
 									</div>
 									<div class="courses-aut-img">
-										<img src="assets/img/user/user2.jpg" alt="">
+										<img src="assets/img/iearnlogosmall1.png" alt="">
 									</div>
 								</div>
 								<div class="courses-body">
@@ -278,20 +278,20 @@
 											<li>	<i class="fas fa-star not-checked"></i> 
 											</li>
 										</ul>
-										<p class="mb-1">John Paul</p>
-										<h4 class="mb-0">Learn Python – Interactive Tutorial</h4>
+										<p class="mb-1">IEARN KENYA</p>
+										<h4 class="mb-0">Web Development in JavaScript</h4>
 									</div>
 								</div>
 								<div class="courses-border"></div>
 								<div class="courses-footer d-flex align-items-center">
 									<div class="courses-count">
 										<ul class="mb-0">
-											<li><i class="fas fa-user-graduate mr-1"></i> 122</li>
-											<li><i class="far fa-file-alt mr-1"></i>2</li>
+											<li><i class="fas fa-user-graduate mr-1"></i> 85</li>
+											<li><i class="far fa-file-alt mr-1"></i>5</li>
 										</ul>
 									</div>
 									<div class="courses-amt ml-auto">
-										<h3 class="mb-0">$100</h3>
+										<h3 class="mb-0">KES: 15000</h3>
 									</div>
 								</div>
 							</div>
@@ -300,10 +300,10 @@
 							<div class="popular-course">
 								<div class="courses-head">
 									<div class="courses-img-main">
-										<img src="assets/img/course/c11.jpg" alt="" class="img-fluid w-100">
+										<img src="assets/img/course/general-coding.jpg" alt="" class="img-fluid w-100">
 									</div>
 									<div class="courses-aut-img">
-										<img src="assets/img/user/user3.jpg" alt="">
+										<img src="assets/img/iearnlogosmall1.png" alt="">
 									</div>
 								</div>
 								<div class="courses-body">
@@ -320,188 +320,20 @@
 											<li>	<i class="fas fa-star not-checked"></i> 
 											</li>
 										</ul>
-										<p class="mb-1">Antony Noel</p>
-										<h4 class="mb-0">Your Guide to Photography</h4>
+										<p class="mb-1">IEARN KENYA</p>
+										<h4 class="mb-0">Introduction to Coding & Computational Thinking</h4>
 									</div>
 								</div>
 								<div class="courses-border"></div>
 								<div class="courses-footer d-flex align-items-center">
 									<div class="courses-count">
 										<ul class="mb-0">
-											<li><i class="fas fa-user-graduate mr-1"></i> 320</li>
-											<li><i class="far fa-file-alt mr-1"></i>8</li>
+											<li><i class="fas fa-user-graduate mr-1"></i> 85</li>
+											<li><i class="far fa-file-alt mr-1"></i>5</li>
 										</ul>
 									</div>
 									<div class="courses-amt ml-auto">
-										<h3 class="mb-0">$600</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-wrap">
-							<div class="popular-course">
-								<div class="courses-head">
-									<div class="courses-img-main">
-										<img src="assets/img/course/c12.jpg" alt="" class="img-fluid w-100">
-									</div>
-									<div class="courses-aut-img">
-										<img src="assets/img/user/user.png" alt="">
-									</div>
-								</div>
-								<div class="courses-body">
-									<div class="courses-ratings">
-										<ul class="mb-1">
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star not-checked"></i> 
-											</li>
-										</ul>
-										<p class="mb-1">Hinata Hyuga</p>
-										<h4 class="mb-0">Become a PHP Master and Expertise</h4>
-									</div>
-								</div>
-								<div class="courses-border"></div>
-								<div class="courses-footer d-flex align-items-center">
-									<div class="courses-count">
-										<ul class="mb-0">
-											<li><i class="fas fa-user-graduate mr-1"></i> 215</li>
-											<li><i class="far fa-file-alt mr-1"></i>3</li>
-										</ul>
-									</div>
-									<div class="courses-amt ml-auto">
-										<h3 class="mb-0">$350</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-wrap">
-							<div class="popular-course">
-								<div class="courses-head">
-									<div class="courses-img-main">
-										<img src="assets/img/course/c13.jpg" alt="" class="img-fluid w-100">
-									</div>
-									<div class="courses-aut-img">
-										<img src="assets/img/user/user8.jpg" alt="">
-									</div>
-								</div>
-								<div class="courses-body">
-									<div class="courses-ratings">
-										<ul class="mb-1">
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star not-checked"></i> 
-											</li>
-										</ul>
-										<p class="mb-1">Keny White</p>
-										<h4 class="mb-0">Learning jQuery Mobile for Beginners</h4>
-									</div>
-								</div>
-								<div class="courses-border"></div>
-								<div class="courses-footer d-flex align-items-center">
-									<div class="courses-count">
-										<ul class="mb-0">
-											<li><i class="fas fa-user-graduate mr-1"></i> 128</li>
-											<li><i class="far fa-file-alt mr-1"></i>2</li>
-										</ul>
-									</div>
-									<div class="courses-amt ml-auto">
-										<h3 class="mb-0">$125</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-wrap">
-							<div class="popular-course">
-								<div class="courses-head">
-									<div class="courses-img-main">
-										<img src="assets/img/course/c14.jpg" alt="" class="img-fluid w-100">
-									</div>
-									<div class="courses-aut-img">
-										<img src="assets/img/user/user2.jpg" alt="">
-									</div>
-								</div>
-								<div class="courses-body">
-									<div class="courses-ratings">
-										<ul class="mb-1">
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star not-checked"></i> 
-											</li>
-										</ul>
-										<p class="mb-1">John Paul</p>
-										<h4 class="mb-0">The Art of Black and White Photography</h4>
-									</div>
-								</div>
-								<div class="courses-border"></div>
-								<div class="courses-footer d-flex align-items-center">
-									<div class="courses-count">
-										<ul class="mb-0">
-											<li><i class="fas fa-user-graduate mr-1"></i> 354</li>
-											<li><i class="far fa-file-alt mr-1"></i>8</li>
-										</ul>
-									</div>
-									<div class="courses-amt ml-auto">
-										<h3 class="mb-0">$620</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 col-sm-12 d-flex flex-wrap">
-							<div class="popular-course">
-								<div class="courses-head">
-									<div class="courses-img-main">
-										<img src="assets/img/course/c15.jpg" alt="" class="img-fluid w-100">
-									</div>
-									<div class="courses-aut-img">
-										<img src="assets/img/user/user3.jpg" alt="">
-									</div>
-								</div>
-								<div class="courses-body">
-									<div class="courses-ratings">
-										<ul class="mb-1">
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star checked"></i> 
-											</li>
-											<li>	<i class="fas fa-star not-checked"></i> 
-											</li>
-										</ul>
-										<p class="mb-1">Antony Noel</p>
-										<h4 class="mb-0">HTML5/CSS3 Essentials in 4-Hours</h4>
-									</div>
-								</div>
-								<div class="courses-border"></div>
-								<div class="courses-footer d-flex align-items-center">
-									<div class="courses-count">
-										<ul class="mb-0">
-											<li><i class="fas fa-user-graduate mr-1"></i> 200</li>
-											<li><i class="far fa-file-alt mr-1"></i>2</li>
-										</ul>
-									</div>
-									<div class="courses-amt ml-auto">
-										<h3 class="mb-0">$400</h3>
+										<h3 class="mb-0">KES: 15000</h3>
 									</div>
 								</div>
 							</div>
@@ -515,7 +347,7 @@
 			<!-- /Popular Courses -->
 			
 			<!-- Instructor -->
-			<section class="instructor-section bg-grey">
+			<!-- <section class="instructor-section bg-grey">
 				<div class="container">
 					<div class="section-heading d-flex align-items-center">
 						<div class="heading-content">
@@ -579,7 +411,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 			<!-- /Instructor -->
 			
 			<!-- Advanced Training -->
@@ -588,9 +420,9 @@
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="training-desc">
-								<h2>French for Beginners to Advanced Training</h2>
+								<h2>Game Development for Beginners to Advanced Training with Minecraft</h2>
 								<p class="text-white mb-4">Get course that you need to improve your skills. Our experts are ready to help. Change your life through learing. Over 40,000 courses.</p>
-								<button class="btn btn-main">Find More <i class="fas fa-caret-right right-nav-secondary"></i></button>
+								<a href="contact.php"><button class="btn btn-main">Contact Us <i class="fas fa-caret-right right-nav-secondary"></i></button></a>
 							</div>
 						</div>
 						<div class="col-lg-6">
@@ -634,8 +466,8 @@
 				<div class="container">
 					<div class="section-heading d-flex align-items-center text-background">
 						<div class="heading-content">
-							<h2><span class="text-weight">Popular </span> Courses <span class="header-right"></span></h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<h2><span class="text-weight">Upcoming </span> Courses <span class="header-right"></span></h2>
+							<p>Find Out the major upcoming and Exiting Courses comming soon</p>
 						</div>
 					</div>
 					<div class="courses-tabs w-100 flex-wrap">
@@ -650,9 +482,9 @@
 											<div class="course-text">
 												<div class="courses-content">
 													<span>145 NEW</span>
-													<h4>DESIGN COURSE BEGINNER</h4>
-													<h5 class="course-amount mb-0"><sup>$</sup>119<sup>/mo</sup></h5>
-													<p>The ultimate drawing course will show you how to create adavnced art that</p>
+													<h4>CREATIVE DESIGN COURSE BEGINNER</h4>
+													<h5 class="course-amount mb-0"><sup>KES</sup>4000<sup>/mo</sup></h5>
+													<p>The ultimate drawing course will show you how to create advanced art through software</p>
 												</div>
 											</div>
 										</div>
@@ -669,8 +501,8 @@
 											<div class="course-text">
 												<div class="courses-content">
 													<span>325 NEW</span>
-													<h4>BUSINESS COURSE BEGINNER</h4>
-													<h5 class="course-amount mb-0"><sup>$</sup>109<sup>/mo</sup></h5>
+													<h4>TECHPRENUERSHIP BIGINEER COURSE</h4>
+													<h5 class="course-amount mb-0"><sup>KES</sup>3500<sup>/mo</sup></h5>
 													<p>The ultimate drawing course will show you how to create adavnced art that</p>
 												</div>
 											</div>
@@ -682,15 +514,15 @@
 								<div class="p-0 d-flex flex-wrap">
 									<div class="bg-card">
 										<div class="course-bg">
-											<img src="assets/img/course-bg1.jpg" alt="" class="img-fluid">
+											<img src="assets/img/course-mydigital.jpg" alt="" class="img-fluid">
 										</div>
 										<div class="course-overlay">
 											<div class="course-text">
 												<div class="courses-content">
 													<span>315 NEW</span>
-													<h4>LIFESTYLE COURSE BEGINNER</h4>
-													<h5 class="course-amount mb-0"><sup>$</sup>209<sup>/mo</sup></h5>
-													<p>The ultimate drawing course will show you how to create adavnced art that</p>
+													<h4>DIGITAL CITIZENSHIP</h4>
+													<h5 class="course-amount mb-0"><sup>KES</sup>4000<sup>/mo</sup></h5>
+													<p>The ultimate digital citizenship course will show you how to create a digital profile and enhance safety guidelines</p>
 												</div>
 											</div>
 										</div>
@@ -708,8 +540,8 @@
 												<div class="courses-content">
 													<span>312 NEW</span>
 													<h4>SOFTWARE COURSE BEGINNER</h4>
-													<h5 class="course-amount mb-0"><sup>$</sup>195<sup>/mo</sup></h5>
-													<p>The ultimate drawing course will show you how to create adavnced art that</p>
+													<h5 class="course-amount mb-0"><sup>KES</sup>5000<sup>/mo</sup></h5>
+													<p>The ultimate software development course will show you how to create and develop software applications</p>
 												</div>
 											</div>
 										</div>
@@ -726,9 +558,9 @@
 											<div class="course-text">
 												<div class="courses-content">
 													<span>115 NEW</span>
-													<h4>PHOTO COURSE BEGINNER</h4>
-													<h5 class="course-amount mb-0"><sup>$</sup>251<sup>/mo</sup></h5>
-													<p>The ultimate drawing course will show you how to create adavnced art that</p>
+													<h4>CREATIVE ART COURSE BEGINNER</h4>
+													<h5 class="course-amount mb-0"><sup>KES</sup>3500<sup>/mo</sup></h5>
+													<p>The ultimate drawing course will show you how to create advanced art that</p>
 												</div>
 											</div>
 										</div>
@@ -754,7 +586,7 @@
 									<a href="#c3" data-toggle="tab">
 										<div class="d-block text-center course-tabs">
 											<i class="fab fa-rocketchat"></i> 
-											<p>Lifestyle</p>
+											<p>Soft Skills</p>
 										</div>
 									</a>
 									<a href="#c4" data-toggle="tab">
@@ -801,7 +633,7 @@
 			<!-- /Best Courses -->
 			
 			<!-- Testimonial -->
-			<section class="testimonial-section bg-grey">
+			<!-- <section class="testimonial-section bg-grey">
 				<div class="container">
 					<div class="section-header text-center">
 						<h3>What People Says</h3>
@@ -836,11 +668,11 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 			<!-- /Testimonial -->
 			
 			<!-- Blogs --> 
-			<section class="blog-sections">
+			<!-- <section class="blog-sections">
 				<div class="container">
 					<div class="section-heading d-flex align-items-center">
 						<div class="heading-content">
@@ -902,7 +734,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 			<!-- /Blogs -->
 			
 			<?php

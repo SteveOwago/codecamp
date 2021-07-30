@@ -136,7 +136,7 @@ include ('includes/head.php');
                             <div class="card card-table">
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-md-5 col-sm-12 col-lg-6">
+                                        <div class="col-md-4 col-sm-12">
                                             <div class="blog-view">
                                                 <div class="blog blog-single-post">
                                                     <div class="blog-image">
@@ -145,7 +145,7 @@ include ('includes/head.php');
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-7 col-sm-12 col-lg-6">
+                                        <div class="col-md-8 col-sm-12">
                                             <div class="blog-view">
                                                 <div class="blog blog-single-post">
                                                     <h3 class="blog-title">Creative Art and Audio Coding With Scratch</h3>

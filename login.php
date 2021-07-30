@@ -1,32 +1,9 @@
 <!DOCTYPE html> 
 <html lang="en">
 	
-<!-- Mirrored from mentoring-html.dreamguystech.com/template-1/login.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Jul 2021 09:52:39 GMT -->
-<head>
-		<meta charset="utf-8">
-		<title>Mentoring</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-		
-		<!-- Favicons -->
-		<link href="assets/img/favicon.png" rel="icon">
-		
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
-		<!-- Fontawesome CSS -->
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-		
-		<!-- Main CSS -->
-		<link rel="stylesheet" href="assets/css/style.css">
-		
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.min.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
-	
-	</head>
+<?php
+    include ('includes/head.php');
+?>
 	<body class="account-page">
 
 		<!-- Main Wrapper -->
@@ -42,10 +19,10 @@
 						<div class="account-box">
 							<div class="login-right">
 								<div class="login-header">
-									<h3>Login <span>Mentoring</span></h3>
+									<h3>Login <span>INNOVATION ACADEMY</span></h3>
 									<p class="text-muted">Access to our dashboard</p>
 								</div>
-								<form action="https://mentoring-html.dreamguystech.com/template-1/index.html">
+								<form action="includes/functions.php">
 									<div class="form-group">
 										<label class="form-control-label">Email Address</label>
 										<input type="email" class="form-control">

@@ -29,10 +29,10 @@
                     <li class="has-submenu">
                         <a href="#">Programs<i class="fas fa-chevron-down"></i></a>
                         <ul class="submenu">
-                            <li><a href="dashboard.html">Virtual Tech Camps</a></li>
-                            <li><a href="bookings.html">1-On-1 Tutoring</a></li>
-                            <li><a href="schedule-timings.html">Small group Learning</a></li>
-                            <li><a href="mentee-list.html">On-Site Training</a></li>
+                            <li><a href="#virtual-techcamp.html">Virtual Tech Camps</a></li>
+                            <li><a href="#1-on-1-tutoring.html">1-On-1 Tutoring</a></li>
+                            <li><a href="#small-group-tutoring.html">Small group Learning</a></li>
+                            <li><a href="#onsite-training.html">On-Site Training</a></li>
 <!--                            <li><a href="profile-mentee.html">Mentee Profile</a></li>-->
 <!--                            <li class="has-submenu">-->
 <!--                                <a href="blog.html">Blog</a>-->
@@ -60,11 +60,11 @@
 <!--                                    <li><a href="map-list.html">Map List</a></li>-->
 <!--                                </ul>-->
 <!--                            </li>-->
-                            <li><a href="search.html">Coding Courses</a></li>
-                            <li><a href="profile.html">Game Dev Courses</a></li>
-                            <li><a href="bookings-mentee.html">Robotics Courses</a></li>
-                            <li><a href="checkout.html">IoT Courses</a></li>
-                            <li><a href="booking-success.html">3D Design Courses</a></li>
+                            <li><a href="#coding-courses">Coding Courses</a></li>
+                            <li><a href="#game-dev-courses.html">Game Dev Courses</a></li>
+                            <li><a href="#robotics-courses.html">Robotics Courses</a></li>
+                            <li><a href="#iot-courses.html">IoT Courses</a></li>
+                            <li><a href="#creative-and-design-courses.html">3D Design Courses</a></li>
 <!--                            <li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>-->
 <!--                            <li><a href="favourites.html">Favourites</a></li>-->
 <!--                            <li><a href="chat-mentee.html">Chat</a></li>-->
@@ -75,21 +75,25 @@
                     <li class="has-submenu">
                         <a href="#">Why IEARN KENYA <i class="fas fa-chevron-down"></i></a>
                         <ul class="submenu">
-                            <li><a href="voice-call.html">Why IEARN KENYA Program</a></li>
-                            <li><a href="video-call.html">History and Mission</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#why-iearn.html">Why IEARN KENYA Program</a></li>
+                            <li><a href="#history-and-mission.html">History and Mission</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="contact.php">Contact</a></li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="contact.php">Contact Us</a>
+                        
                     </li>
 
                 </ul>
             </div>
             <ul class="nav header-navbar-rht">
                 <li class="nav-item">
-                    <a class="nav-link header-register" href="login.html">Login</a>
+                    <a class="nav-link header-register" href="#login.html">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link header-login" href="register.html">Register</a>
+                    <a class="nav-link header-login" href="register.php">Register</a>
                 </li>
             </ul>
         </div>
