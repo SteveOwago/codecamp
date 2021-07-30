@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>CodeCamp - iEARN KENYA</title>
+    <title>Innovation Academy - iEARN KENYA</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="./assets/icon/apple-icon-57x57.png">
