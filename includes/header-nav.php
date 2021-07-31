@@ -75,7 +75,7 @@
                     <li class="has-submenu">
                         <a href="#">Why IEARN KENYA <i class="fas fa-chevron-down"></i></a>
                         <ul class="submenu">
-                            <li><a href="#why-iearn.html">Why IEARN KENYA Program</a></li>
+                            <li><a href="#why-iearn.php">Why IEARN KENYA Program</a></li>
                             <li><a href="#history-and-mission.html">History and Mission</a></li>
                             <li><a href="#">Blog</a></li>
                             <li><a href="contact.php">Contact</a></li>
