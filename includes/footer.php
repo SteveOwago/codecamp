@@ -48,7 +48,7 @@
 										<li><a href="minecraft.php">Minecraft</a></li>
 										<li><a href="blender.php">Blender</a></li>
 										<li><a href="maya.php">Autodesk Maya</a></li>
-										<li><a href="premiere.php">Adobe Premiere</a></li>
+										<li><a href="priemere.php">Adobe Premiere</a></li>
 									</ul>
 								</div>
 								<!-- /Footer Widget -->

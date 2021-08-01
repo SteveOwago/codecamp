@@ -24,8 +24,8 @@ include ('includes/head.php');
         <div class="container">
             <div class="banner-content text-center">
                 <div class="banner-heading">
-                    <h2>Block-Based Coding With python</h2>
-                    <p>Learn Fundamental Concepts of Coding Through python</p>
+                    <h2>Video Editing with Adobe Premiere Pro</h2>
+                    <p>Improve Your Video Editing and Manipulation Skills with Industry Experts</p>
                 </div>
                 <!-- <div class="banner-forms">
                     <form class="banner-form" action="https://mentoring-html.dreamguystech.com/template-1/search.html">
@@ -148,7 +148,7 @@ include ('includes/head.php');
                                         <div class="col-md-7 col-sm-12 col-lg-6">
                                             <div class="blog-view">
                                                 <div class="blog blog-single-post">
-                                                    <h3 class="blog-title">Creative Art and Audio Coding With python</h3>
+                                                    <h3 class="blog-title">Improve your Creative art amd Video Editing Skills with Adobe Premiere</h3>
                                                     <div class="blog-info clearfix">
                                                         <div class="post-left">
                                                             <ul>
