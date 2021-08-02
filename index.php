@@ -27,17 +27,6 @@
 							<h2>INNOVATION ACADEMY</h2>
 							<p>Shape Your Future Learning New Skills</p>
 						</div>
-						<!-- <div class="banner-forms">
-							<form class="banner-form" action="https://mentoring-html.dreamguystech.com/template-1/search.html">
-								<div class="input-group-form form-style form-br col-md-3 col-12"> <i class="fas fa-map-marker-alt text-warning"></i>
-									<input class="input-style-form" type="text" placeholder="Search Location" name="going">
-								</div>
-								<div class="input-group-form form-style col-md-6 col-12"> 
-									<input class="input-style-form" type="text" placeholder="Search School, Online eductional centers, etc" name="going">
-								</div>
-								<button class="btn button-form col-md-3 col-12" type="submit">Search Now</button>
-							</form>
-						</div> -->
 					</div>
 					<div class="banner-footer">
 						<div class="banner-details">
