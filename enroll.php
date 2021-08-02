@@ -22,7 +22,7 @@
 						<div class="account-box">
 							<div class="login-right">
 								<div class="login-header">
-									<h3><span>Register</span> INNOVATION ACADEMY</h3>
+									<h3><span>ENROLL</span> INNOVATION ACADEMY</h3>
 									<p class="text-muted">Sign Up for a Learning Course</p>
 								</div>
 								<?php

@@ -24,20 +24,10 @@ include ('includes/head.php');
         <div class="container">
             <div class="banner-content text-center">
                 <div class="banner-heading">
-                    <h2>Block-Based Coding With unity</h2>
-                    <p>Learn Fundamental Concepts of Coding Through unity</p>
+                    <h2>Learn Unity with C#</h2>
+                    <p>Learn Fundamental Concepts of Game Development with Unity</p>
                 </div>
-                <!-- <div class="banner-forms">
-                    <form class="banner-form" action="https://mentoring-html.dreamguystech.com/template-1/search.html">
-                        <div class="input-group-form form-style form-br col-md-3 col-12"> <i class="fas fa-map-marker-alt text-warning"></i>
-                            <input class="input-style-form" type="text" placeholder="Search Location" name="going">
-                        </div>
-                        <div class="input-group-form form-style col-md-6 col-12">
-                            <input class="input-style-form" type="text" placeholder="Search School, Online eductional centers, etc" name="going">
-                        </div>
-                        <button class="btn button-form col-md-3 col-12" type="submit">Search Now</button>
-                    </form>
-                </div> -->
+
             </div>
             <div class="banner-footer">
                 <div class="banner-details">
@@ -140,7 +130,7 @@ include ('includes/head.php');
                                             <div class="blog-view">
                                                 <div class="blog blog-single-post">
                                                     <div class="blog-image">
-                                                        <a href="javascript:void(0);"><img alt="" src="assets/img/block-based-coding-header.jpg" class="img-fluid"></a>
+                                                        <a href="javascript:void(0);"><img alt="" src="assets/img/unity-course.jpg" class="img-fluid"></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -148,7 +138,7 @@ include ('includes/head.php');
                                         <div class="col-md-7 col-sm-12 col-lg-6">
                                             <div class="blog-view">
                                                 <div class="blog blog-single-post">
-                                                    <h3 class="blog-title">Creative Art and Audio Coding With unity</h3>
+                                                    <h3 class="blog-title">Coding With Unity</h3>
                                                     <div class="blog-info clearfix">
                                                         <div class="post-left">
                                                             <ul>
@@ -159,21 +149,19 @@ include ('includes/head.php');
                                                                 </li>
                                                                 <li><i class="fas fa-user-graduate"></i> Average Students: 10 Per Session</li>
                                                                 <li> <i class="fa fa-code"></i> Path: Coding, Game Dev, Creative</li>
-                                                                <li><i class="fa fa-tags"></i>unity</li>
+                                                                <li><i class="fa fa-tags"></i>Unity</li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <div class="blog-content">
-                                                        <p class="lead">Creativity is to see what is, and then make what could be.
-                                                            Early on, you don't need advanced software and complicated installations...all you need is unity.
-                                                            Designed by MIT, it provides an image editor and audio capture features right out of the box.
-                                                            Making your characters, stories, or even simple animated shorts jump off the screen is the name of the game.
-                                                            Record sounds, draw characters and backgrounds, and flex your creative muscles!</p>
+                                                        <p class="lead">Developers across the world use Unity to make Mobile, PC, and even console games.
+                                                            With the ability to design a game once and publish to multiple platforms, there's a reason many developers choose Unity first when making their dream programs.
+                                                            Programs in Unity are coded with the C# (c-sharp) language.</p>
 
                                                         <h4>Online Course Requirements:</h4>
                                                         <ol>
                                                             <li>-Mac, Windows PC, or Chromebook only</li>
-                                                            <li>-Visual coding environment is online</li>
+                                                            <li>-Unity</li>
                                                             <li>-WebCam</li>
                                                             <li>-Stable internet connection with access to Zoom Video Conferencing</li>
                                                         </ol>
@@ -215,10 +203,10 @@ include ('includes/head.php');
                                                 <div class="blog-content">
                                                     <h2>In this Course You Will:</h2>
                                                     <ol class="lead">
-                                                        <li>-Create and design characters</li>
-                                                        <li>-Draw custom backgrounds</li>
-                                                        <li>-Design and animate sprites</li>
-                                                        <li>-Experiment and explore to build creativity and confidence</li>
+                                                        <li>-Program interactions with C#</li>
+                                                        <li>-Use game objects, models, and levels to create game environments</li>
+                                                        <li>-Think in 3D to create interactive experiences</li>
+                                                        <li>-Develop coding and design skills</li>
                                                     </ol>
                                                     <h2>Your tuition includes:</h2>
                                                     <ol class="lead">
