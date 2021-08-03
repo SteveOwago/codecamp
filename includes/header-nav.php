@@ -32,7 +32,7 @@
                             <li><a href="virtual-techcamp.php">Virtual Tech Camps</a></li>
                             <li><a href="1-on-1-tutoring.php">1-On-1 Tutoring</a></li>
                             <li><a href="small-group-tutoring.php">Small group Learning</a></li>
-                            <li><a href="#onsite-training.html">On-Site Training</a></li>
+                            <li><a href="#onsite-training.php">On-Site Training</a></li>
 <!--                            <li><a href="profile-mentee.html">Mentee Profile</a></li>-->
 <!--                            <li class="has-submenu">-->
 <!--                                <a href="blog.html">Blog</a>-->
@@ -60,11 +60,10 @@
 <!--                                    <li><a href="map-list.html">Map List</a></li>-->
 <!--                                </ul>-->
 <!--                            </li>-->
-                            <li><a href="#coding-courses">Coding Courses</a></li>
-                            <li><a href="#game-dev-courses.html">Game Dev Courses</a></li>
-                            <li><a href="#robotics-courses.html">Robotics Courses</a></li>
-                            <li><a href="#iot-courses.html">IoT Courses</a></li>
-                            <li><a href="#creative-and-design-courses.html">3D Design Courses</a></li>
+                            <li><a href="coding.php">Coding Courses</a></li>
+                            <li><a href="game_dev.php">Game Dev Courses</a></li>
+                            <li><a href="robotics.php">Robotics & IOT Courses</a></li>
+                            <li><a href="creative_design.php">Creative Design </a></li>
 <!--                            <li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>-->
 <!--                            <li><a href="favourites.html">Favourites</a></li>-->
 <!--                            <li><a href="chat-mentee.html">Chat</a></li>-->
@@ -90,10 +89,10 @@
             </div>
             <ul class="nav header-navbar-rht">
                 <li class="nav-item">
-                    <a class="nav-link header-register" href="#login.html">Login</a>
+                    <a class="nav-link header-register" href="account/login.php">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link header-login" href="register.php">Register</a>
+                    <a class="nav-link header-login" href="account/register.php">Register</a>
                 </li>
             </ul>
         </div>
