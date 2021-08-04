@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 04, 2021 at 01:56 PM
+-- Generation Time: Aug 04, 2021 at 02:24 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.27
 
@@ -31,7 +31,7 @@ CREATE TABLE `courses` (
   `id` int(10) NOT NULL,
   `name` varchar(255) NOT NULL,
   `price` double NOT NULL DEFAULT 15000,
-  `date` date NOT NULL DEFAULT current_timestamp()
+  `date` date DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
