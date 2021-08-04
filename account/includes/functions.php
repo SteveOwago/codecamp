@@ -51,7 +51,6 @@ function accountLogin(){
         if (mysqli_num_rows($result)>0){
             while($row = mysqli_fetch_array($result)){
                 if(password_verify($password, $row['password'])){
-
                     $_SESSION['email'] = $email;
                     header('Location:../index.php');
                 }else{
@@ -84,3 +83,35 @@ function get_courses()
     return $ret;
 }
 $error="";
+
+function get_data($sql){
+    global $conn;
+    $ret = array();
+    $result = mysqli_query($conn,$sql);
+    while($ar = mysqli_fetch_assoc($result)){
+        $ret[] = $ar;
+    }
+    return $ret;
+}
+
+// Function Enroll student to a course
+if(isset($_POST['enroll-course'])){
+    enrollCourse();
+}
+
+function enrollCourse(){
+    global $conn;
+    $course_id = escape($_POST['course_id']);
+    $user_id = escape($_POST['user_id']);
+    
+    $sql= "INSERT INTO course_enroll(`course_id`,`user_id`) VALUES('$course_id','$user_id')";
+    $result=mysqli_query($conn,$sql);
+    if($result == true){
+        header('Location:../my-courses.php');
+    }else{
+        echo "<script>
+              alert('Error Please Try Again Later');
+              window.location.href='../index.php'; 
+        </script>";
+    }
+}

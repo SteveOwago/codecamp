@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 03, 2021 at 03:10 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.0
+-- Generation Time: Aug 04, 2021 at 01:56 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -30,26 +29,50 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `courses` (
   `id` int(10) NOT NULL,
-  `name` varchar(255) NOT NULL
+  `name` varchar(255) NOT NULL,
+  `price` double NOT NULL DEFAULT 15000,
+  `date` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `courses`
 --
 
-INSERT INTO `courses` (`id`, `name`) VALUES
-(1, 'Block-Based Coding With Scratch'),
-(2, 'Coding in Python'),
-(3, 'Build Simple Applications With Java'),
-(4, 'Basic Coding in C++'),
-(5, 'Video Manipulation in Adobe Premeire'),
-(6, '3D Design in Maya'),
-(7, '3D Printing using Blender'),
-(8, 'Web Development with JavaScript'),
-(9, 'Game Dev in Roblox'),
-(10, 'Game Development with Unity'),
-(11, 'Game Development with MineCraft'),
-(12, '3D Design and Modeling with Blender');
+INSERT INTO `courses` (`id`, `name`, `price`, `date`) VALUES
+(13, 'Game Dev in Roblox', 15000, '0000-00-00'),
+(14, 'Block-Based Coding With Scratch\r\n', 15000, '0000-00-00'),
+(15, 'Web Development with JavaScript\r\n', 15000, '0000-00-00'),
+(16, '3D Design and Modeling with Blender\r\n', 15000, '0000-00-00'),
+(17, 'Game Development with MineCraft\r\n', 15000, '0000-00-00'),
+(18, 'Coding in Python\r\n', 15000, '0000-00-00'),
+(19, 'Build Simple Applications With Java\r\n', 15000, '0000-00-00'),
+(20, 'Video Manipulation in Adobe Premiere\r\n', 15000, '0000-00-00'),
+(21, '3D Design in Maya\r\n', 15000, '0000-00-00'),
+(22, '3D Printing using Blender\r\n', 15000, '0000-00-00'),
+(23, 'Game Development with Unity\r\n', 15000, '0000-00-00'),
+(24, 'Basic Coding in C++', 15000, '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course_enroll`
+--
+
+CREATE TABLE `course_enroll` (
+  `course_id` int(10) NOT NULL,
+  `user_id` int(10) NOT NULL,
+  `datetime` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `course_enroll`
+--
+
+INSERT INTO `course_enroll` (`course_id`, `user_id`, `datetime`) VALUES
+(19, 2, '2021-08-04 13:57:33'),
+(16, 2, '2021-08-04 13:59:13'),
+(13, 2, '2021-08-04 14:11:34'),
+(13, 2, '2021-08-04 14:11:42');
 
 -- --------------------------------------------------------
 
@@ -122,7 +145,7 @@ CREATE TABLE `users` (
   `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `phone` varchar(15) NOT NULL,
-  `role_id` int(10) NOT NULL DEFAULT '2',
+  `role_id` int(10) NOT NULL DEFAULT 2,
   `trn_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -141,7 +164,15 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `role_id`, `trn
 -- Indexes for table `courses`
 --
 ALTER TABLE `courses`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`);
+
+--
+-- Indexes for table `course_enroll`
+--
+ALTER TABLE `course_enroll`
+  ADD KEY `user` (`user_id`),
+  ADD KEY `courses` (`course_id`);
 
 --
 -- Indexes for table `registration`
@@ -171,7 +202,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `registration`
@@ -194,6 +225,13 @@ ALTER TABLE `users`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `course_enroll`
+--
+ALTER TABLE `course_enroll`
+  ADD CONSTRAINT `courses` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `registration`

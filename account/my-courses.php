@@ -45,7 +45,9 @@ header("location:login.php");
 										<div class="col-sm-7">
 											<div class="avatar-md profile-user mb-4"><img src="assets/img/profiles/avatar.png" alt="" class="img-thumbnail rounded-circle img-fluid"></div>
 											<div class="d-block">
-												<h5><?php echo htmlentities($_SESSION["email"]);?></h5>
+												<h5><?php 
+                                                $email= $_SESSION["email"];
+                                                echo htmlentities($email);?></h5>
 												<p class="text-muted mb-0  text-truncate">Student</p>
 											</div>
 										</div>
@@ -135,10 +137,14 @@ header("location:login.php");
 									</div>
 								</div>
 							</div>
-							<!-- Recent Orders -->
+							
+						</div>
+					</div>
+                    <div class="row">
+                        <!-- Recent Orders -->
 							<div class="card card-table">
 								<div class="card-header">
-									<h4 class="card-title">All Courses List</h4>
+									<h4 class="card-title">My Courses</h4>
 								</div>
 								<div class="card-body">
 									<div class="table-responsive">
@@ -149,35 +155,40 @@ header("location:login.php");
 													<th>Course</th>
 													<th>Price</th>
 													<th>Reviews</th>
+                                                    <th>Action</th>
 												</tr>
 											</thead>
 											<tbody>
 											<?php
-													$sqlcourses = "SELECT * FROM courses ORDER BY id ASC";
+													$sqlcourses = "SELECT * FROM users,courses,course_enroll WHERE courses.id=course_enroll.course_id AND users.id = course_enroll.user_id AND users.email ='$email'";
 													$courses = get_data($sqlcourses);
-													foreach ($courses as $course) {
-														$id = $course['id'];
-														$name = $course['name'];
-														$price = $course['price'];
-														?>
-														
-														<tr>
-													<td>
-														<?php echo htmlentities($id);?>
-													</td>
-													<td><?php echo htmlentities($name);?></td>
-													<td>KES <?php echo htmlentities($price);?></td>
-													<td>
-														<i class="fas fa-star text-warning"></i>
-														<i class="fas fa-star text-warning"></i>
-														<i class="fas fa-star text-warning"></i>
-														<i class="fas fa-star text-warning"></i>
-														<i class="far fa-star text-secondary"></i>
-													</td>
-													<td><a class="btn btn-warning waves-effect waves-light btn-sm" href="enroll.php?course=<?php echo $id;?>">Enroll<i class="mdi mdi-arrow-right ml-1"></i></a></div></td>
-												</tr>
+													if(count($courses)>0){
+														foreach ($courses as $course) {
+															$id = $course['id'];
+															$name = $course['name'];
+															$price = $course['price'];
+															?>
+															
+															<tr>
+														<td>
+															<?php echo htmlentities($id);?>
+														</td>
+														<td><?php echo htmlentities($name);?></td>
+														<td>KES <?php echo htmlentities($price);?></td>
+														<td>
+															<i class="fas fa-star text-warning"></i>
+															<i class="fas fa-star text-warning"></i>
+															<i class="fas fa-star text-warning"></i>
+															<i class="fas fa-star text-warning"></i>
+															<i class="far fa-star text-secondary"></i>
+														</td>
+														<td><a class="btn btn-success" href="payment-mpesa.php?course=<?php echo $id;?>"><i class="fas fa-coins"></i> Pay</a></div></td>
+													</tr>
 												<?php
-													}
+														}
+													}else{
+                                                        echo "No Courses Enrolled!";
+                                                    }
 												?>
 											</tbody>
 										</table>
@@ -186,8 +197,7 @@ header("location:login.php");
 								
 							</div>
 							<!-- /Recent Orders -->
-						</div>
-					</div>
+                    </div>
 				</div>
 			</div>
 			<!-- /Page Wrapper -->

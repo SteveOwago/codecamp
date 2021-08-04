@@ -10,6 +10,9 @@
                     <a href="index.php"><i class="feather-home"></i><span>Dashboard</span></a>
                 </li>
                 <li>
+                    <a href="#my-courses.php.php"><i class="fa fa-graduation-cap"></i><span>My Courses</span></a>
+                </li>
+                <!-- <li>
                     <a href="mentor.html"><i class="feather-user"></i><span>Mentor</span></a>
                 </li>
                 <li>
@@ -112,7 +115,7 @@
                             <a href="javascript:void(0);"> <span>Level 1</span></a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
             <hr>
             <ul>

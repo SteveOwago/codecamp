@@ -45,7 +45,9 @@ header("location:login.php");
 										<div class="col-sm-7">
 											<div class="avatar-md profile-user mb-4"><img src="assets/img/profiles/avatar.png" alt="" class="img-thumbnail rounded-circle img-fluid"></div>
 											<div class="d-block">
-												<h5><?php echo htmlentities($_SESSION["email"]);?></h5>
+												<h5><?php 
+                                                $email= $_SESSION["email"];
+                                                echo htmlentities($email);?></h5>
 												<p class="text-muted mb-0  text-truncate">Student</p>
 											</div>
 										</div>
@@ -136,56 +138,64 @@ header("location:login.php");
 								</div>
 							</div>
 							<!-- Recent Orders -->
-							<div class="card card-table">
-								<div class="card-header">
-									<h4 class="card-title">All Courses List</h4>
-								</div>
-								<div class="card-body">
-									<div class="table-responsive">
-									<table class="table table-hover table-center table-stripped">
-											<thead>
-												<tr>
-													<th>#ID</th>
-													<th>Course</th>
-													<th>Price</th>
-													<th>Reviews</th>
-												</tr>
-											</thead>
-											<tbody>
-											<?php
-													$sqlcourses = "SELECT * FROM courses ORDER BY id ASC";
-													$courses = get_data($sqlcourses);
-													foreach ($courses as $course) {
-														$id = $course['id'];
-														$name = $course['name'];
-														$price = $course['price'];
-														?>
-														
-														<tr>
-													<td>
-														<?php echo htmlentities($id);?>
-													</td>
-													<td><?php echo htmlentities($name);?></td>
-													<td>KES <?php echo htmlentities($price);?></td>
-													<td>
-														<i class="fas fa-star text-warning"></i>
-														<i class="fas fa-star text-warning"></i>
-														<i class="fas fa-star text-warning"></i>
-														<i class="fas fa-star text-warning"></i>
-														<i class="far fa-star text-secondary"></i>
-													</td>
-													<td><a class="btn btn-warning waves-effect waves-light btn-sm" href="enroll.php?course=<?php echo $id;?>">Enroll<i class="mdi mdi-arrow-right ml-1"></i></a></div></td>
-												</tr>
-												<?php
-													}
-												?>
-											</tbody>
-										</table>
-									</div>
-								</div>
-								
-							</div>
-							<!-- /Recent Orders -->
+                            <?php
+                                if(isset($_GET['course'])){
+                                    $id = $_GET['course'];
+                                
+                                    $sqlcourse = "SELECT * FROM courses WHERE id=".$id;
+									$courses = get_data($sqlcourse);
+                                    foreach ($courses as $course) {
+                                        $id = $course['id'];
+                                        $name = $course['name'];
+                                        $price = $course['price'];
+                                        ?>
+                               
+                                        <div class="card card-table">
+                                            <div class="card-header">
+                                                <h4 class="card-title">Enroll for <?php echo htmlentities($name);?></h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <div>
+                                                    <div class="col-md-6 offset-3">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-stripped">
+                                                            <tr>
+                                                                <th>Course</th>
+                                                                <th>Amount</th>
+                                                            </tr>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><?php echo htmlentities($name);?></td>
+                                                                    <td>KES: <?php echo htmlentities($price);?></td>
+                                                                </tr>
+                                                            </tbody>
+                                                            </table> 
+                                                        </div>
+                                                        <div class="text-center mt-4 mb-4">
+                                                            <form method="post" action="includes/functions.php">
+                                                                <input type="hidden" name="course_id" value="<?php echo htmlentities($id);?>">
+                                                                <input type="hidden" name="user_id" value="<?php 
+                                                                    $sqluser = "SELECT * FROM users WHERE email='$email'";
+                                                                    $user = get_data($sqluser);
+                                                                    foreach ($user as $usr) {
+                                                                        $user_id = $usr['id'];
+                                                                        echo htmlentities($user_id);
+                                                                    }
+                                                                ?>">
+                                                                <button type="submit" name="enroll-course" class="btn btn-success"> <i class="fa fa-graduation-cap"></i> Enroll</button>
+                                                            </form>
+                                                        </div>       
+                                                    </div>
+                                            </div>
+                                    
+                                            </div>
+                                            
+                                        </div>
+                                        <?php
+                                    }
+                                }
+                             ?>
+                                        <!-- /Recent Orders -->
 						</div>
 					</div>
 				</div>
