@@ -2532,7 +2532,7 @@ html.menu-opened body {
 }
 .banner-section-course-cplusplus {
 	position: relative;
-	background: url(../img/scratch-header.jpg);
+	background: url(../img/cplusplus-course-header.jpg);
 	background-position: 50% 0;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -2550,7 +2550,7 @@ html.menu-opened body {
 }
 .banner-section-course-unity {
 	position: relative;
-	background: url(../img/scratch-header.jpg);
+	background: url(../img/unity-course-header.jpg);
 	background-position: 50% 0;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -2568,7 +2568,7 @@ html.menu-opened body {
 }
 .banner-section-course-minecraft {
 	position: relative;
-	background: url(../img/scratch-header.jpg);
+	background: url(../img/minecraft-course-header.png);
 	background-position: 50% 0;
 	background-size: cover;
 	background-repeat: no-repeat;

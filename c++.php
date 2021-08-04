@@ -24,20 +24,9 @@ include ('includes/head.php');
         <div class="container">
             <div class="banner-content text-center">
                 <div class="banner-heading">
-                    <h2>Block-Based Coding With c++</h2>
+                    <h2>Coding Apps & Games with C++</h2>
                     <p>Learn Fundamental Concepts of Coding Through c++</p>
                 </div>
-                <!-- <div class="banner-forms">
-                    <form class="banner-form" action="https://mentoring-html.dreamguystech.com/template-1/search.html">
-                        <div class="input-group-form form-style form-br col-md-3 col-12"> <i class="fas fa-map-marker-alt text-warning"></i>
-                            <input class="input-style-form" type="text" placeholder="Search Location" name="going">
-                        </div>
-                        <div class="input-group-form form-style col-md-6 col-12">
-                            <input class="input-style-form" type="text" placeholder="Search School, Online eductional centers, etc" name="going">
-                        </div>
-                        <button class="btn button-form col-md-3 col-12" type="submit">Search Now</button>
-                    </form>
-                </div> -->
             </div>
             <div class="banner-footer">
                 <div class="banner-details">
@@ -140,7 +129,7 @@ include ('includes/head.php');
                                             <div class="blog-view">
                                                 <div class="blog blog-single-post">
                                                     <div class="blog-image">
-                                                        <a href="javascript:void(0);"><img alt="" src="assets/img/block-based-coding-header.jpg" class="img-fluid"></a>
+                                                        <a href="javascript:void(0);"><img alt="" src="assets/img/cplusplus-course.jpg" class="img-fluid"></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -148,7 +137,7 @@ include ('includes/head.php');
                                         <div class="col-md-7 col-sm-12 col-lg-6">
                                             <div class="blog-view">
                                                 <div class="blog blog-single-post">
-                                                    <h3 class="blog-title">Creative Art and Audio Coding With c++</h3>
+                                                    <h3 class="blog-title">Coding Apps & Games with C++</h3>
                                                     <div class="blog-info clearfix">
                                                         <div class="post-left">
                                                             <ul>
@@ -164,16 +153,17 @@ include ('includes/head.php');
                                                         </div>
                                                     </div>
                                                     <div class="blog-content">
-                                                        <p class="lead">Creativity is to see what is, and then make what could be.
-                                                            Early on, you don't need advanced software and complicated installations...all you need is c++.
-                                                            Designed by MIT, it provides an image editor and audio capture features right out of the box.
-                                                            Making your characters, stories, or even simple animated shorts jump off the screen is the name of the game.
-                                                            Record sounds, draw characters and backgrounds, and flex your creative muscles!</p>
+                                                        <p class="lead">Learn the fundamentals of C++, one of the world's most essential programming languages,
+                                                            with applications spanning from system software design to game development.
+                                                            C++ opens the door to the vast world of coding and development, no matter what you want to create.
+                                                            As you grow your skills, you’ll tackle challenges like creating programs that utilize multiple classes, creating objects,
+                                                            and making text adventure and console games for more interactive engagement.
+                                                            Jump-start your programming career while using industry-standard language features to create impressive projects.</p>
 
                                                         <h4>Online Course Requirements:</h4>
                                                         <ol>
                                                             <li>-Mac, Windows PC, or Chromebook only</li>
-                                                            <li>-Visual coding environment is online</li>
+                                                            <li>-Dev C++ or Codeblocks</li>
                                                             <li>-WebCam</li>
                                                             <li>-Stable internet connection with access to Zoom Video Conferencing</li>
                                                         </ol>
@@ -215,10 +205,11 @@ include ('includes/head.php');
                                                 <div class="blog-content">
                                                     <h2>In this Course You Will:</h2>
                                                     <ol class="lead">
-                                                        <li>-Create and design characters</li>
-                                                        <li>-Draw custom backgrounds</li>
-                                                        <li>-Design and animate sprites</li>
-                                                        <li>-Experiment and explore to build creativity and confidence</li>
+                                                        <li>-Declare, initialize, and use variables</li>
+                                                        <li>-Work with strings, characters, and algorithms</li>
+                                                        <li>-Solve programming challenges with logic and code</li>
+                                                        <li>-Create text adventures and console based games</li>
+                                                        <li>-Read and respond to user input</li>
                                                     </ol>
                                                     <h2>Your tuition includes:</h2>
                                                     <ol class="lead">

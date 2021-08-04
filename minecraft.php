@@ -24,20 +24,9 @@ include ('includes/head.php');
         <div class="container">
             <div class="banner-content text-center">
                 <div class="banner-heading">
-                    <h2>Block-Based Coding With minecraft</h2>
-                    <p>Learn Fundamental Concepts of Coding Through minecraft</p>
+                    <h2>Minecraft Adventure Design</h2>
+                    <p>Learn Fundamental Concepts of Game Environment Design</p>
                 </div>
-                <!-- <div class="banner-forms">
-                    <form class="banner-form" action="https://mentoring-html.dreamguystech.com/template-1/search.html">
-                        <div class="input-group-form form-style form-br col-md-3 col-12"> <i class="fas fa-map-marker-alt text-warning"></i>
-                            <input class="input-style-form" type="text" placeholder="Search Location" name="going">
-                        </div>
-                        <div class="input-group-form form-style col-md-6 col-12">
-                            <input class="input-style-form" type="text" placeholder="Search School, Online eductional centers, etc" name="going">
-                        </div>
-                        <button class="btn button-form col-md-3 col-12" type="submit">Search Now</button>
-                    </form>
-                </div> -->
             </div>
             <div class="banner-footer">
                 <div class="banner-details">
@@ -140,7 +129,7 @@ include ('includes/head.php');
                                             <div class="blog-view">
                                                 <div class="blog blog-single-post">
                                                     <div class="blog-image">
-                                                        <a href="javascript:void(0);"><img alt="" src="assets/img/block-based-coding-header.jpg" class="img-fluid"></a>
+                                                        <a href="javascript:void(0);"><img alt="" src="assets/img/minecraft-course.png" class="img-fluid"></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -164,16 +153,16 @@ include ('includes/head.php');
                                                         </div>
                                                     </div>
                                                     <div class="blog-content">
-                                                        <p class="lead">Creativity is to see what is, and then make what could be.
-                                                            Early on, you don't need advanced software and complicated installations...all you need is minecraft.
-                                                            Designed by MIT, it provides an image editor and audio capture features right out of the box.
-                                                            Making your characters, stories, or even simple animated shorts jump off the screen is the name of the game.
-                                                            Record sounds, draw characters and backgrounds, and flex your creative muscles!</p>
+                                                        <p class="lead">Get ready to leave your mark and change the course of Minecraft!
+                                                            You'll create your own stunning adventure, guiding players with signs, and even making traps or contraptions with advanced redstone and command blocks.
+                                                            With custom resource packs, you’ll visually alter the world players see, and as you build game design and pacing skills,
+                                                            you’ll create an experience that’s exciting and memorable.
+                                                            It's up to you to design the next great adventure that awaits in the world of Minecraft!</p>
 
                                                         <h4>Online Course Requirements:</h4>
                                                         <ol>
                                                             <li>-Mac, Windows PC, or Chromebook only</li>
-                                                            <li>-Visual coding environment is online</li>
+                                                            <li>-Minecraft Java Edition</li>
                                                             <li>-WebCam</li>
                                                             <li>-Stable internet connection with access to Zoom Video Conferencing</li>
                                                         </ol>
@@ -215,10 +204,10 @@ include ('includes/head.php');
                                                 <div class="blog-content">
                                                     <h2>In this Course You Will:</h2>
                                                     <ol class="lead">
-                                                        <li>-Create and design characters</li>
-                                                        <li>-Draw custom backgrounds</li>
-                                                        <li>-Design and animate sprites</li>
-                                                        <li>-Experiment and explore to build creativity and confidence</li>
+                                                        <li>-Create resource packs to re-skin blocks and items</li>
+                                                        <li>-Build redstone circuits and machines</li>
+                                                        <li>-Utilize command blocks to enhance maps</li>
+                                                        <li>-Develop planning and design skills</li>
                                                     </ol>
                                                     <h2>Your tuition includes:</h2>
                                                     <ol class="lead">

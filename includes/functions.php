@@ -29,7 +29,7 @@ function registerCourse(){
         header('Location:../courses.php?message');
     }else{
         $_SESSION['error'] = "Registration Failed. Please Try Again Later";
-        header('Location:register.php?message');
+        header('Location:enroll.php?message');
     }
     
 }

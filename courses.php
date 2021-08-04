@@ -57,7 +57,7 @@
 									</div>
 									<div class="banner-contents">
 										<h2>Private Sessions</h2>
-										<a href="#">See all Sessions<i class="fas fa-caret-right right-nav-white"></i></a>
+										<a href="">See all Sessions<i class="fas fa-caret-right right-nav-white"></i></a>
 									</div>
 								</div>
 							</div>
@@ -68,7 +68,7 @@
 									</div>
 									<div class="banner-contents">
 										<h2>Coding Courses</h2>
-										<a href="#">See all Courses <i class="fas fa-caret-right right-nav-white"></i></a>
+										<a href="">See all Courses <i class="fas fa-caret-right right-nav-white"></i></a>
 									</div>
 								</div>
 							</div>
@@ -79,7 +79,7 @@
 									</div>
 									<div class="banner-contents">
 										<h2>Project-Based Learning</h2>
-										<a href="#">Contact us <i class="fas fa-caret-right right-nav-white"></i></a>
+										<a href="">Contact us <i class="fas fa-caret-right right-nav-white"></i></a>
 									</div>
 								</div>
 							</div>
@@ -110,7 +110,7 @@
 										<h4 class="mb-0">Block-Based Coding Scratch</h4>
 										<p class="mb-1"><b>Age:</b> 9-12 years</p>
 										<div class="section-btn m-auto mt-2">
-											<a href="#scratch.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a>
+											<a href="scratch.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a>
 										</div>
 									</div>
 								</div>
@@ -140,7 +140,7 @@
 										<h4 class="mb-0">Basic Program Development in Java</h4>
 										<p class="mb-1"><b>Age:</b> 13-16 years</p>
 										<div class="section-btn m-auto mt-2">
-											<a href="#java.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a> 
+											<a href="java.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a>
 										</div>
 									</div>
 								</div>
@@ -170,7 +170,7 @@
 										<h4 class="mb-0">Basic Program Development in Python</h4>
 										<p class="mb-1"><b>Age:</b> 13-16 years</p>
 										<div class="section-btn m-auto mt-2">
-											<a href="#python.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a> 
+											<a href="python.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a> 
 										</div>
 									</div>
 								</div>
@@ -200,7 +200,7 @@
 										<h4 class="mb-0">Creative Design in Blender</h4>
 										<p class="mb-1"><b>Age:</b> 13-16 years</p>
 										<div class="section-btn m-auto mt-2">
-											<a href="#blender.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a>
+											<a href="blender.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a>
 										</div>
 									</div>
 								</div>
@@ -230,7 +230,7 @@
 										<h4 class="mb-0">Basic Game Development in Roblox</h4>
 										<p class="mb-1"><b>Age:</b> 9-13 years</p>
 										<div class="section-btn m-auto mt-2">
-											<a href="#roblox.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a> 
+											<a href="roblox.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a> 
 										</div>
 									</div>
 								</div>
@@ -260,7 +260,7 @@
 										<h4 class="mb-0">Basic Web Development in JavaScript</h4>
 										<p class="mb-1"><b>Age:</b> 13-16 years</p>
 										<div class="section-btn m-auto mt-2">
-											<a href="#javascript.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a> 
+											<a href="javascript.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a> 
 										</div>
 									</div>
 								</div>
@@ -290,7 +290,7 @@
 										<h4 class="mb-0">3D Creative Design in Maya</h4>
 										<p class="mb-1"><b>Age:</b> 13-16 years</p>
 										<div class="section-btn m-auto mt-2">
-											<a href="#maya.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a>
+											<a href="maya.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a>
 										</div>
 									</div>
 								</div>
@@ -320,7 +320,7 @@
 										<h4 class="mb-0">Basic Video Editing and Art in Adobe Premiere</h4>
 										<p class="mb-1"><b>Age:</b> 9-14 years</p>
 										<div class="section-btn m-auto mt-2">
-											<a href="#priemere.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a>
+											<a href="priemere.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a>
 										</div>
 									</div>
 								</div>
@@ -350,7 +350,7 @@
 										<h4 class="mb-0">3D Modelling and Printing with Autodesk</h4>
 										<p class="mb-1"><b>Age:</b> 9-14 years</p>
 										<div class="section-btn m-auto mt-2">
-											<a href="#3d-printing.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a> 
+											<a href="3d-printing.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a> 
 										</div>
 									</div>
 								</div>
@@ -380,7 +380,7 @@
 										<h4 class="mb-0">Video Game Dev with Minecraft</h4>
 										<p class="mb-1"><b>Age:</b> 8+ years</p>
 										<div class="section-btn m-auto mt-2">
-											<a href="#minecraft.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a> 
+											<a href="minecraft.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a> 
 										</div>
 									</div>
 								</div>
@@ -410,7 +410,7 @@
 										<h4 class="mb-0">Game Development with Unity</h4>
 										<p class="mb-1"><b>Age:</b> 9-14 years</p>
 										<div class="section-btn m-auto mt-2">
-											<a href="#unity.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a> 
+											<a href="unity.php"><button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a> 
 										</div>
 									</div>
 								</div>
@@ -440,7 +440,7 @@
 										<h4 class="mb-0">Programming & App Development in C++</h4>
 										<p class="mb-1"><b>Age:</b> 9-14 years</p>
 										<div class="section-btn m-auto mt-2">
-											<a href="#c++.php"> <button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a>
+											<a href="c++.php"> <button class="btn btn-course">View Course<i class="fas fa-caret-right right-nav-white"></i></button></a>
 										</div>
 									</div>
 								</div>
