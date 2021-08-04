@@ -32,7 +32,7 @@
                             <li><a href="virtual-techcamp.php">Virtual Tech Camps</a></li>
                             <li><a href="1-on-1-tutoring.php">1-On-1 Tutoring</a></li>
                             <li><a href="small-group-tutoring.php">Small group Learning</a></li>
-                            <li><a href="#onsite-training.html">On-Site Training</a></li>
+                            <li><a href="onsite-training.php">On-Site Training</a></li>
 <!--                            <li><a href="profile-mentee.html">Mentee Profile</a></li>-->
 <!--                            <li class="has-submenu">-->
 <!--                                <a href="blog.html">Blog</a>-->
