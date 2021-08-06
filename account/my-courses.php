@@ -137,7 +137,25 @@ header("location:login.php");
 									</div>
 								</div>
 							</div>
-							
+							<div class="row">
+								<div class="col-xl-8 col-sm-8 col-md-8 offset-2">
+									<div class="card">
+										<div class="card-body">
+											<div class="dash-widget-header">
+												<span class="dash-widget-icon text-primary bg-primary-light">
+												<i class="fa fa-coins"></i>
+												</span>
+												<div class="dash-count">
+													<h3>***</h3>
+												</div>
+											</div>
+											<div class="dash-widget-info bg-warning">
+												<p class="text-muted">If you experience problems with payments, please contact: +25470063323 </p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
                     <div class="row">
@@ -182,7 +200,34 @@ header("location:login.php");
 															<i class="fas fa-star text-warning"></i>
 															<i class="far fa-star text-secondary"></i>
 														</td>
-														<td><a class="btn btn-success" href="payment-mpesa.php?course=<?php echo $id;?>"><i class="fas fa-coins"></i> Pay</a></div></td>
+														<td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $id; ?>"> <i class="fa fa-coins"></i> Pay </button>
+														<div class="modal fade" id="exampleModal<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+														<form action="includes/functions.php" method="post" class="form-horizontal">
+															<div class="modal-dialog" role="document">
+																	<div class="modal-content">
+																		<div class="modal-header">
+																			<h5 class="modal-title" id="exampleModalLabel">Pay: KES <?php echo htmlentities($price); ?>/=</h5>
+																			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																			<span aria-hidden="true">&times;</span>
+																			</button>
+																		</div>
+																	
+																		<div class="modal-body">
+																			<p>Course: <?php echo htmlentities($name); ?></p>
+																			<div class="form-group">
+																				<label for="phone">Phone</label>
+																				<input type="hidden" name="amount" value="<?php echo $price;?>">
+																				<input type="number" class="form-control" name="phone" placeholder="2547xxxxxxxx">
+																			</div>
+																		</div>
+																		<div class="modal-footer">
+																			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+																			<input type="submit" name="submit-payment" class="btn btn-success" value="Submit">
+																		</div>
+																	
+																	</div>
+															</div>
+														</form></td>
 													</tr>
 												<?php
 														}

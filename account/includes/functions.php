@@ -1,7 +1,7 @@
 <?php
 session_start();
 $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
-
+use Safaricom\Mpesa;
 function escape($val){
     global $conn;
     return mysqli_real_escape_string($conn, trim($val));
@@ -114,4 +114,44 @@ function enrollCourse(){
               window.location.href='../index.php'; 
         </script>";
     }
+}
+
+//MPESA STK PUSH
+
+if(isset($_POST['submit-payment'])){
+    processMpesaStk();
+}
+
+function processMpesaStk(){
+
+    $amount = escape($_POST['amount']);
+    $phone = escape($_POST['phone']);
+
+    $BusinessShortCode=174379;
+    $LipaNaMpesaPasskey='bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';
+    $TransactionType= 'CustomerPayBillOnline';
+    $Amount= $amount;
+    $PartyA= $phone;
+    $PartyB=174379;
+    $PhoneNumber= $phone;
+    $CallBackURL='https://innovationacademy.africa/account/includes/callback2343sdteo0P.php';
+    $AccountReference='iEARN Innovation Academy';
+    $TransactionDesc='FEEPayment';
+    $Remarks='Thank You';
+
+    $mpesa= new Mpesa();
+
+    $stkPushSimulation=$mpesa->STKPushSimulation(
+                                            $BusinessShortCode,
+                                            $LipaNaMpesaPasskey,
+                                            $TransactionType,
+                                            $Amount,
+                                            $PartyA,
+                                            $PartyB,
+                                            $PhoneNumber,
+                                            $CallBackURL,
+                                            $AccountReference,
+                                            $TransactionDesc,
+                                            $Remarks
+                                    );
 }
