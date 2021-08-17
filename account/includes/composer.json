@@ -1,6 +1,0 @@
-{
-    "require": {
-        "safaricom/mpesa": "^1.0",
-        "vlucas/phpdotenv": "^5.3"
-    }
-}

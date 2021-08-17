@@ -216,6 +216,8 @@ header("location:login.php");
 																			<p>Course: <?php echo htmlentities($name); ?></p>
 																			<div class="form-group">
 																				<label for="phone">Phone</label>
+                                                                                <input type="hidden" name="course_id" value="<?php echo $id;?>">
+                                                                                <input type="hidden" name="email" value="<?php echo $email;?>">
 																				<input type="hidden" name="amount" value="<?php echo $price;?>">
 																				<input type="number" class="form-control" name="phone" placeholder="2547xxxxxxxx">
 																			</div>

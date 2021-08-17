@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 04, 2021 at 02:24 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 7.3.27
+-- Generation Time: Aug 17, 2021 at 02:35 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -30,8 +31,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `courses` (
   `id` int(10) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `price` double NOT NULL DEFAULT 15000,
-  `date` date DEFAULT current_timestamp()
+  `price` double NOT NULL DEFAULT '15000',
+  `date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -39,7 +40,7 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`id`, `name`, `price`, `date`) VALUES
-(13, 'Game Dev in Roblox', 15000, '0000-00-00'),
+(13, 'Game Dev in Roblox', 1, '0000-00-00'),
 (14, 'Block-Based Coding With Scratch\r\n', 15000, '0000-00-00'),
 (15, 'Web Development with JavaScript\r\n', 15000, '0000-00-00'),
 (16, '3D Design and Modeling with Blender\r\n', 15000, '0000-00-00'),
@@ -61,7 +62,7 @@ INSERT INTO `courses` (`id`, `name`, `price`, `date`) VALUES
 CREATE TABLE `course_enroll` (
   `course_id` int(10) NOT NULL,
   `user_id` int(10) NOT NULL,
-  `datetime` datetime NOT NULL DEFAULT current_timestamp()
+  `datetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -72,7 +73,40 @@ INSERT INTO `course_enroll` (`course_id`, `user_id`, `datetime`) VALUES
 (19, 2, '2021-08-04 13:57:33'),
 (16, 2, '2021-08-04 13:59:13'),
 (13, 2, '2021-08-04 14:11:34'),
-(13, 2, '2021-08-04 14:11:42');
+(13, 2, '2021-08-04 14:11:42'),
+(15, 3, '2021-08-06 08:13:19'),
+(13, 3, '2021-08-17 09:46:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course_payments`
+--
+
+CREATE TABLE `course_payments` (
+  `id` int(10) NOT NULL,
+  `course_id` int(10) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `amount` double(8,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mpesa_payments`
+--
+
+CREATE TABLE `mpesa_payments` (
+  `id` int(10) NOT NULL,
+  `result_code` varchar(10) NOT NULL,
+  `result_desc` varchar(255) NOT NULL,
+  `merchant_request_id` varchar(50) NOT NULL,
+  `checkout_request_id` varchar(50) NOT NULL,
+  `amount` double(8,2) NOT NULL,
+  `mpesa_receipt_number` varchar(30) NOT NULL,
+  `transaction_date` datetime NOT NULL,
+  `phone_number` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -145,7 +179,7 @@ CREATE TABLE `users` (
   `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `phone` varchar(15) NOT NULL,
-  `role_id` int(10) NOT NULL DEFAULT 2,
+  `role_id` int(10) NOT NULL DEFAULT '2',
   `trn_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -154,7 +188,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `role_id`, `trn_date`) VALUES
-(2, 'Stephen Owago', 'stevenowago@gmail.com', '$2y$10$X4LBT4hq.KYIOyfFIh192uICXhanC3qjfE61oCMn0FCkQ3ujc5dOy', '+254713218312', 2, '2021-08-03');
+(2, 'Stephen Owago', 'stevenowago@gmail.com', '$2y$10$X4LBT4hq.KYIOyfFIh192uICXhanC3qjfE61oCMn0FCkQ3ujc5dOy', '+254713218312', 2, '2021-08-03'),
+(3, 'Stephen Owago', 'steveowago@gmail.com', '$2y$10$eGNswCIiIT9t.nGZuANr9eIqjK8hmyWqSRJoS51w2T4UhpYcHZir2', '+254713218312', 2, '2021-08-04');
 
 --
 -- Indexes for dumped tables
@@ -173,6 +208,19 @@ ALTER TABLE `courses`
 ALTER TABLE `course_enroll`
   ADD KEY `user` (`user_id`),
   ADD KEY `courses` (`course_id`);
+
+--
+-- Indexes for table `course_payments`
+--
+ALTER TABLE `course_payments`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `course` (`course_id`);
+
+--
+-- Indexes for table `mpesa_payments`
+--
+ALTER TABLE `mpesa_payments`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `registration`
@@ -205,6 +253,18 @@ ALTER TABLE `courses`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
+-- AUTO_INCREMENT for table `course_payments`
+--
+ALTER TABLE `course_payments`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `mpesa_payments`
+--
+ALTER TABLE `mpesa_payments`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `registration`
 --
 ALTER TABLE `registration`
@@ -220,7 +280,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
@@ -234,16 +294,10 @@ ALTER TABLE `course_enroll`
   ADD CONSTRAINT `user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `registration`
+-- Constraints for table `course_payments`
 --
-ALTER TABLE `registration`
-  ADD CONSTRAINT `course` FOREIGN KEY (`course`) REFERENCES `courses` (`id`);
-
---
--- Constraints for table `users`
---
-ALTER TABLE `users`
-  ADD CONSTRAINT `role` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON UPDATE CASCADE;
+ALTER TABLE `course_payments`
+  ADD CONSTRAINT `course` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
