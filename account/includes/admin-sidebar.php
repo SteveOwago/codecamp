@@ -10,7 +10,7 @@
                     <a href="index.php"><i class="feather-home"></i><span>Dashboard</span></a>
                 </li>
                 <li>
-                    <a href="my-courses.php"><i class="fa fa-graduation-cap"></i><span>My Courses</span></a>
+                    <a href="paid-courses.php"><i class="fa fa-graduation-cap"></i><span>Paid Courses</span></a>
                 </li>
                 <!-- <li>
                     <a href="mentor.html"><i class="feather-user"></i><span>Mentor</span></a>

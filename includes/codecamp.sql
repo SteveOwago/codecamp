@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 17, 2021 at 02:35 PM
+-- Generation Time: Aug 19, 2021 at 08:00 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -108,6 +108,15 @@ CREATE TABLE `mpesa_payments` (
   `phone_number` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `mpesa_payments`
+--
+
+INSERT INTO `mpesa_payments` (`id`, `result_code`, `result_desc`, `merchant_request_id`, `checkout_request_id`, `amount`, `mpesa_receipt_number`, `transaction_date`, `phone_number`) VALUES
+(1, '', '', '', '', 0.00, '', '0000-00-00 00:00:00', ''),
+(2, '', '', '', '', 0.00, '', '0000-00-00 00:00:00', ''),
+(3, '', '', '', '', 0.00, '', '0000-00-00 00:00:00', '');
+
 -- --------------------------------------------------------
 
 --
@@ -189,7 +198,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `role_id`, `trn_date`) VALUES
 (2, 'Stephen Owago', 'stevenowago@gmail.com', '$2y$10$X4LBT4hq.KYIOyfFIh192uICXhanC3qjfE61oCMn0FCkQ3ujc5dOy', '+254713218312', 2, '2021-08-03'),
-(3, 'Stephen Owago', 'steveowago@gmail.com', '$2y$10$eGNswCIiIT9t.nGZuANr9eIqjK8hmyWqSRJoS51w2T4UhpYcHZir2', '+254713218312', 2, '2021-08-04');
+(3, 'Stephen Owago', 'steveowago@gmail.com', '$2y$10$eGNswCIiIT9t.nGZuANr9eIqjK8hmyWqSRJoS51w2T4UhpYcHZir2', '+254713218312', 1, '2021-08-04');
 
 --
 -- Indexes for dumped tables
@@ -262,7 +271,7 @@ ALTER TABLE `course_payments`
 -- AUTO_INCREMENT for table `mpesa_payments`
 --
 ALTER TABLE `mpesa_payments`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `registration`

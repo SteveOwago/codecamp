@@ -1,13 +1,13 @@
 <?php
 include ('functions.php');
-global $conn;
+//global $conn;
 $stkCallbackResponse = file_get_contents('php://input');
 //$logFile = "stkPushCallbackResponse.txt";
 //$log = fopen($logFile, "a");
 //fwrite($log, $stkCallbackResponse);
 //fclose($log);
 ////change the Database settings
-//$conn = mysqli_connect("localhost","narionte_root","Alv5X9fXRVmf","narionte_academy");
+//$conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 
 $data = json_decode($stkCallbackResponse);
 
@@ -31,4 +31,15 @@ if($query){
 }else{
     echo "<script>alert('Payment Not Saved! Please Contact Us on 0700063323');
                    window.location.href='../index.php';</script>";
+}
+function updatePayment(){
+    global $conn;
+    $email = $_SESSION['email'];
+    $course_id = $_SESSION['course_id'];
+    $amount = $_SESSION['amount'];
+    $sql = "INSERT INTO course_payments(`course_id`,`email`,`amount`) VALUES('$course_id','$email','$amount')";
+    $query = mysqli_query($conn,$sql);
+    if ($query){
+        header('Location:../index.php?payment');
+    }
 }

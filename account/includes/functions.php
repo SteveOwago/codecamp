@@ -7,6 +7,21 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
         return mysqli_real_escape_string($conn, trim($val));
     }
 
+    // Check if user is admin
+    function isAdmin($email){
+    	global $conn;
+    	$user = false;
+		$query = "SELECT * FROM users WHERE role_id = 1 AND email = '$email' LIMIT 1";
+		$result = mysqli_query($conn,$query);
+		while($ar = mysqli_fetch_assoc($result))
+		{
+			$ret[] = $ar;
+		}
+		return $ret;
+    }
+
+    //Registration
+
     if(isset($_POST['register-account'])){
         registerAccount();
     }
@@ -67,6 +82,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
     }
     function accountLogout(){
         session_unset();
+        session_destroy();
         header('Location:../login.php');
     }
     function get_courses()
@@ -126,8 +142,9 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 
         $amount = escape($_POST['amount']);
         $phone = escape($_POST['phone']);
-        $auth_url='https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
-        $stk_push_url='https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
+        $auth_url='https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';//replace sandbox with api for live
+        $stk_push_url='https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';//replace sandbox with api for live
+        $stk_push_url='https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';//replace sandbox with api for live
         $consumer_key='plGeftfZnLQezfbLcw4PPqH17O7xoitQ';
         $consumer_secret='Hu4U1l9JdBAA4fKJ';
         $credentials=base64_encode($consumer_key.':'.$consumer_secret);
@@ -159,7 +176,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
             'PartyA'                 =>$phone,
             'PartyB'                 =>174379,
             'PhoneNumber'            =>$phone,
-            'CallBackURL'            =>'https://innovationacademy.africa/account/includes/callback2343sdteo0P.php',
+            'CallBackURL'            =>'https://nariontechacademy.co.ke/callback.php',
             'AccountReference'       =>'iEARN KENYA',
             'TransactionDesc'        =>'Fee Account'
 
@@ -176,19 +193,21 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
         if($curl_res){
             echo "<script>alert('Unlock your phone and enter your Mpesa Pin to finish the Transaction <br> Thank You');
                        window.location.href='../my-courses.php';</script>";
+            $_SESSION['course_id']= escape($_POST['course_id']);
+            $_SESSION['email']= escape($_POST['email']);
         }
     }
 
     //Update Payment
-    function updatePayment(){
-        global $conn;
-        $email = escape($_POST['email']);
-        $course_id = escape($_POST['course_id']);
-        $amount = escape($_POST['amount']);
-        $sql = "INSERT INTO course_payments(`course_id`,`email`,`amount`) VALUES('$course_id','$email','$amount')";
-        $query = mysqli_query($conn,$sql);
-        if ($query){
-            echo "<script>alert('Payment Saved Successfully');
-                       window.location.href='../my-courses.php';</script>";
-        }
-    }
+//    function updatePayment(){
+//        global $conn;
+//        $email = $_SESSION['email'];
+//        $course_id = $_SESSION['course_id'];
+//        $amount = $_SESSION['amount'];
+//        $sql = "INSERT INTO course_payments(`course_id`,`email`,`amount`) VALUES('$course_id','$email','$amount')";
+//        $query = mysqli_query($conn,$sql);
+//        if ($query){
+//            echo "<script>alert('Payment Saved Successfully');
+//                       window.location.href='../my-courses.php';</script>";
+//        }
+//    }
