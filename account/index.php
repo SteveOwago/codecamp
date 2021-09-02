@@ -111,11 +111,15 @@ header("location:login.php");
 												<i class="fas fa-credit-card"></i>
 												</span>
 												<div class="dash-count">
-													<h3>487</h3>
+													<h3><?php
+															$sqlcourses = "SELECT * FROM courses";
+															$courses = get_data($sqlcourses);
+															echo count($courses);
+														?></h3>
 												</div>
 											</div>
 											<div class="dash-widget-info">
-												<h6 class="text-muted">Appointments</h6>
+												<h6 class="text-muted">Courses</h6>
 												<div class="progress progress-sm">
 													<div class="progress-bar bg-success w-50"></div>
 												</div>
@@ -135,7 +139,7 @@ header("location:login.php");
 												</div>
 											</div>
 											<div class="dash-widget-info">
-												<h6 class="text-muted">Progress Points</h6>
+												<h6 class="text-muted">Total Sessions</h6>
 												<div class="progress progress-sm">
 													<div class="progress-bar bg-warning w-50"></div>
 												</div>
@@ -144,59 +148,104 @@ header("location:login.php");
 									</div>
 								</div>
 							</div>
-							<!-- Recent Orders -->
-							<div class="card card-table">
-								<div class="card-header">
-									<h4 class="card-title">All Courses List</h4>
-								</div>
-								<div class="card-body">
-									<div class="table-responsive">
-									<table class="table table-hover table-center table-stripped">
-											<thead>
-												<tr>
-													<th>#ID</th>
-													<th>Course</th>
-													<th>Price</th>
-													<th>Reviews</th>
-												</tr>
-											</thead>
-											<tbody>
-											<?php
-													$sqlcourses = "SELECT * FROM courses ORDER BY id ASC";
-													$courses = get_data($sqlcourses);
-													foreach ($courses as $course) {
-														$id = $course['id'];
-														$name = $course['name'];
-														$price = $course['price'];
-														?>
-														
-														<tr>
-													<td>
-														<?php echo htmlentities($id);?>
-													</td>
-													<td><?php echo htmlentities($name);?></td>
-													<td>KES <?php echo htmlentities($price);?></td>
-													<td>
-														<i class="fas fa-star text-warning"></i>
-														<i class="fas fa-star text-warning"></i>
-														<i class="fas fa-star text-warning"></i>
-														<i class="fas fa-star text-warning"></i>
-														<i class="far fa-star text-secondary"></i>
-													</td>
-													<td><a class="btn btn-warning waves-effect waves-light btn-sm" href="enroll.php?course=<?php echo $id;?>">Enroll<i class="mdi mdi-arrow-right ml-1"></i></a></div></td>
-												</tr>
-												<?php
-													}
-												?>
-											</tbody>
-										</table>
-									</div>
-								</div>
-								
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="dash-widget-header">
+												<span class="dash-widget-icon text-primary bg-primary-light">
+												<i class="fas fa-users-cog"></i>
+												</span>
+                                                <div class="dash-count">
+                                                    <a href="add-tutor.php" class="btn btn-outline-primary">Add User</a>
+                                                </div>
+                                            </div>
+                                            <div class="dash-widget-info">
+                                                <h6 class="text-muted">Tutor</h6>
+                                                <div class="progress progress-sm">
+                                                    <div class="progress-bar bg-primary w-50"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="dash-widget-header">
+												<span class="dash-widget-icon text-success bg-success-light">
+												<i class="fas fa-book"></i>
+												</span>
+                                                <div class="dash-count">
+                                                    <a href="add-course.php" class="btn btn-outline-success">Add Course</a>
+                                                </div>
+                                            </div>
+                                            <div class="dash-widget-info">
+                                                <h6 class="text-muted">Course</h6>
+                                                <div class="progress progress-sm">
+                                                    <div class="progress-bar bg-success w-50"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
 							</div>
-							<!-- /Recent Orders -->
 						</div>
 					</div>
+                <div class="row">
+                    <div class="col-sm-8 offset-2">
+                        <div class="card card-table">
+                            <div class="card-header">
+                                <h4 class="card-title">All Courses List</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-center table-stripped">
+                                        <thead>
+                                        <tr>
+                                            <th>#ID</th>
+                                            <th>Course</th>
+                                            <th>Price</th>
+                                            <th>Reviews</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+										<?php
+											$sqlcourses = "SELECT * FROM courses ORDER BY id ASC";
+											$courses = get_data($sqlcourses);
+											foreach ($courses as $course) {
+											$id = $course['id'];
+											$name = $course['name'];
+											$price = $course['price'];
+										?>
+
+                                        <tr>
+                                            <td>
+												<?php echo htmlentities($id);?>
+                                            </td>
+                                            <td><?php echo htmlentities($name);?></td>
+                                            <td>KES <?php echo htmlentities($price);?></td>
+                                            <td>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="far fa-star text-secondary"></i>
+                                            </td>
+                                            <td><a class="btn btn-warning waves-effect waves-light btn-sm" href="view-course.php?course=<?php echo $id;?>">View Course<i class="mdi mdi-arrow-right ml-1"></i></a></div></td>
+                                </tr>
+								<?php
+									}
+								?>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 				</div>
 			</div>
 			<!-- /Page Wrapper -->

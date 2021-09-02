@@ -110,6 +110,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
         return $ret;
     }
 
+    
 // Function Enroll student to a course
     if(isset($_POST['enroll-course'])){
         enrollCourse();
@@ -131,7 +132,172 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
         </script>";
         }
     }
-
+	
+	
+	// Function Create Course
+	if(isset($_POST['add-course'])){
+		addCourse();
+	}
+	
+	function addCourse(){
+		global $conn;
+		$name = escape($_POST['name']);
+		$description = escape($_POST['description']);
+		$startdate = escape($_POST['date']);
+		$price = escape($_POST['price']);
+		
+		$sql= "INSERT INTO courses(`name`,`description`,`date`,`price`) VALUES('$name','$description','$startdate','$price')";
+		$result=mysqli_query($conn,$sql);
+		if($result == true){
+			echo "<script>
+              alert('Course Created Succefully');
+              window.location.href='../index.php';
+              
+        </script>";
+		}else{
+			echo "<script>
+              alert('Error Please Try Again Later');
+              window.location.href='../index.php';
+        </script>";
+		}
+	}
+	
+	// Function Update Session
+	if(isset($_POST['update-course'])){
+		updateCourse();
+	}
+	
+	function updateCourse(){
+		global $conn;
+		$course_id = escape($_POST['id']);
+		$name = escape($_POST['name']);
+		$description = escape($_POST['description']);
+		$startdate = escape($_POST['date']);
+		$price = escape($_POST['price']);
+		
+		$sql= "UPDATE courses SET `name`='$name',`description`='$description',`date`='$startdate',`price`='$price' WHERE id =".$course_id;
+		$result=mysqli_query($conn,$sql);
+		if($result == true){
+			echo "<script>
+              alert('Session Edited Succefully');
+              window.location.href='../view-course.php?course=$course_id';
+              
+        </script>";
+		}else{
+			echo "<script>
+              alert('Error Please Try Again Later');
+              window.location.href='../view-course.php?course=$course_id';
+        </script>";
+		}
+	}
+	
+	
+	// Function Create Session
+	if(isset($_POST['add-session'])){
+		addSession();
+	}
+	
+	function addSession(){
+		global $conn;
+		$course_id = escape($_POST['course_id']);
+		$name = escape($_POST['name']);
+		$description = escape($_POST['description']);
+		$startdatetime = escape($_POST['startdatetime']);
+		$link = escape($_POST['link']);
+		
+		$sql= "INSERT INTO sessions(`course_id`,`name`,`description`,`startdatetime`,`link`) VALUES('$course_id','$name','$description','$startdatetime','$link')";
+		$result=mysqli_query($conn,$sql);
+		if($result == true){
+			echo "<script>
+              alert('Session Created Succefully');
+              window.location.href='../view-course.php?course=$course_id';
+              
+        </script>";
+		}else{
+			echo "<script>
+              alert('Error Please Try Again Later');
+              window.location.href='../add-session.php?course=$course_id';
+        </script>";
+		}
+	}
+	
+	// Function Update Session
+	if(isset($_POST['update-session'])){
+		updateSession();
+	}
+	
+	function updateSession(){
+		global $conn;
+		$session_id = escape($_POST['id']);
+		$name = escape($_POST['name']);
+		$description = escape($_POST['description']);
+		$startdatetime = escape($_POST['startdatetime']);
+		$link = escape($_POST['link']);
+		
+		$sql= "UPDATE sessions SET `name`='$name',`description`='$description',`startdatetime`='$startdatetime',`link`='$link' WHERE id =".$session_id;
+		$result=mysqli_query($conn,$sql);
+		if($result == true){
+			echo "<script>
+              alert('Session Edited Succefully');
+              window.location.href='../view-session.php?session=$session_id';
+              
+        </script>";
+		}else{
+			echo "<script>
+              alert('Error Please Try Again Later');
+              window.location.href='../view-session.php?session=$session_id';
+        </script>";
+		}
+	}
+	
+	//Delete Session
+	if (isset($_GET['deleteCourse'])){
+		$id = $_GET['deleteCourse'];
+		$sql = "DELETE FROM courses WHERE id=".$id;
+		$delete = delete($sql);
+		if($delete == true){
+			echo "<script>
+              alert('Course Deleted Succefully');
+              window.location.href='../index.php';
+              
+        </script>";
+		}else{
+			echo "<script>
+              alert('Course Not Deleted');
+              window.location.href='../index.php';
+        </script>";
+		}
+		
+	}
+	//Delete Session
+	if (isset($_GET['deleteSession'])){
+		$id = $_GET['deleteSession'];
+		$sql = "DELETE FROM sessions WHERE id=".$id;
+		$delete = delete($sql);
+		if($delete == true){
+			echo "<script>
+              alert('Session Deleted Succefully');
+              window.location.href='../index.php';
+              
+        </script>";
+		}else{
+			echo "<script>
+              alert('Session Not Deleted');
+              window.location.href='../index.php';
+        </script>";
+		}
+		
+	}
+//Delete Function
+	function delete($sql){
+		global  $conn;
+		$result=mysqli_query($conn,$sql);
+		if($result){
+			return true;
+		}else{
+			return false;
+		}
+	}
 //MPESA STK PUSH
 
     if(isset($_POST['submit-payment'])){
