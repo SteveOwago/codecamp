@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 19, 2021 at 08:00 PM
+-- Generation Time: Sep 03, 2021 at 06:20 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -31,27 +31,28 @@ SET time_zone = "+00:00";
 CREATE TABLE `courses` (
   `id` int(10) NOT NULL,
   `name` varchar(255) NOT NULL,
+  `description` text,
   `price` double NOT NULL DEFAULT '15000',
-  `date` date DEFAULT NULL
+  `date` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `courses`
 --
 
-INSERT INTO `courses` (`id`, `name`, `price`, `date`) VALUES
-(13, 'Game Dev in Roblox', 1, '0000-00-00'),
-(14, 'Block-Based Coding With Scratch\r\n', 15000, '0000-00-00'),
-(15, 'Web Development with JavaScript\r\n', 15000, '0000-00-00'),
-(16, '3D Design and Modeling with Blender\r\n', 15000, '0000-00-00'),
-(17, 'Game Development with MineCraft\r\n', 15000, '0000-00-00'),
-(18, 'Coding in Python\r\n', 15000, '0000-00-00'),
-(19, 'Build Simple Applications With Java\r\n', 15000, '0000-00-00'),
-(20, 'Video Manipulation in Adobe Premiere\r\n', 15000, '0000-00-00'),
-(21, '3D Design in Maya\r\n', 15000, '0000-00-00'),
-(22, '3D Printing using Blender\r\n', 15000, '0000-00-00'),
-(23, 'Game Development with Unity\r\n', 15000, '0000-00-00'),
-(24, 'Basic Coding in C++', 15000, '0000-00-00');
+INSERT INTO `courses` (`id`, `name`, `description`, `price`, `date`) VALUES
+(13, 'Game Dev in Roblox', 'For more information about this course please contact our support', 2, '2021-09-15T08:55'),
+(14, 'Block-Based Coding With Scratch\r\n', NULL, 15000, '0000-00-00'),
+(15, 'Web Development with JavaScript\r\n', NULL, 15000, '0000-00-00'),
+(16, '3D Design and Modeling with Blender\r\n', NULL, 15000, '0000-00-00'),
+(17, 'Game Development with MineCraft\r\n', NULL, 15000, '0000-00-00'),
+(18, 'Coding in Python\r\n', NULL, 15000, '0000-00-00'),
+(19, 'Build Simple Applications With Java\r\n', NULL, 15000, '0000-00-00'),
+(20, 'Video Manipulation in Adobe Premiere\r\n', NULL, 15000, '0000-00-00'),
+(21, '3D Design in Maya\r\n', NULL, 15000, '0000-00-00'),
+(22, '3D Printing using Blender\r\n', NULL, 15000, '0000-00-00'),
+(23, 'Game Development with Unity\r\n', NULL, 15000, '0000-00-00'),
+(24, 'Basic Coding in C++', NULL, 15000, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -179,6 +180,28 @@ INSERT INTO `roles` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `sessions`
+--
+
+CREATE TABLE `sessions` (
+  `id` int(10) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `startdatetime` varchar(25) NOT NULL,
+  `link` text NOT NULL,
+  `course_id` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sessions`
+--
+
+INSERT INTO `sessions` (`id`, `name`, `description`, `startdatetime`, `link`, `course_id`) VALUES
+(4, 'Session 1: Introduction to JavaScript', 'A programming language commonly used all over the web, JavaScript allows the creation of interactive websites. The language also has uses in robotics, game design, and many other fields, so no matter where your interests lie, JavaScript can help you build something incredible. Like with all programming languages, JavaScript has certain advantages and disadvantages to consider. Many of these are related to the way JavaScript is often executed directly in a client\'s browser. But there are other ways to use JavaScript now that allow it to have the same benefits as server-side languages.', '2021-09-13T08:00', 'https://meet.google.com/eex-dwho-hby', 15);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -198,7 +221,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `role_id`, `trn_date`) VALUES
 (2, 'Stephen Owago', 'stevenowago@gmail.com', '$2y$10$X4LBT4hq.KYIOyfFIh192uICXhanC3qjfE61oCMn0FCkQ3ujc5dOy', '+254713218312', 2, '2021-08-03'),
-(3, 'Stephen Owago', 'steveowago@gmail.com', '$2y$10$eGNswCIiIT9t.nGZuANr9eIqjK8hmyWqSRJoS51w2T4UhpYcHZir2', '+254713218312', 1, '2021-08-04');
+(3, 'Stephen Owago', 'steveowago@gmail.com', '$2y$10$eGNswCIiIT9t.nGZuANr9eIqjK8hmyWqSRJoS51w2T4UhpYcHZir2', '+254713218312', 1, '2021-08-04'),
+(4, 'Stephen Owago', 'steveowago@iearnkenya.org', '$2y$10$994cBHx/0QoLqgSESaLjcOEuuzFrFLQoKspkualBs079lSgwNLdcC', '+254713218312', 2, NULL);
 
 --
 -- Indexes for dumped tables
@@ -245,6 +269,12 @@ ALTER TABLE `roles`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `sessions`
+--
+ALTER TABLE `sessions`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -286,10 +316,16 @@ ALTER TABLE `roles`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `sessions`
+--
+ALTER TABLE `sessions`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

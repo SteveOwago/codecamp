@@ -12,7 +12,10 @@ header("location:login.php");
         include ('includes/head.php');
        
     ?>
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.0/css/dataTables.bootstrap4.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script>
 	<body>
     <?php
 //        Check if user is Admin
@@ -79,51 +82,50 @@ header("location:login.php");
 						</div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-8 col-sm-12">
-                                <div class="card card-table">
+                        <div class="col-lg-8 col-sm-12 offset-2">
+                                <div class="card">
                                     <div class="card-header">
                                         <h4 class="card-title">All Courses List</h4>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
-                                        <table class="table table-hover table-center table-stripped">
+                                            <table id="example" class="table table-striped table-bordered" style="width:100%;padding: 15%;">
                                                 <thead>
-                                                    <tr>
-                                                        <th>#ID</th>
-                                                        <th>Course</th>
-                                                        <th>Price</th>
-                                                        <th>Reviews</th>
-                                                    </tr>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Price</th>
+                                                    <th>Date</th>
+                                                    <th>Action</th>
+                                                </tr>
                                                 </thead>
                                                 <tbody>
-                                                <?php
-                                                        $sqlcourses = "SELECT * FROM courses ORDER BY id ASC";
-                                                        $courses = get_data($sqlcourses);
-                                                        foreach ($courses as $course) {
-                                                            $id = $course['id'];
-                                                            $name = $course['name'];
-                                                            $price = $course['price'];
-                                                            ?>
-                                                            
-                                                            <tr>
-                                                        <td>
-                                                            <?php echo htmlentities($id);?>
-                                                        </td>
-                                                        <td><?php echo htmlentities($name);?></td>
-                                                        <td>KES <?php echo htmlentities($price);?></td>
-                                                        <td>
-                                                            <i class="fas fa-star text-warning"></i>
-                                                            <i class="fas fa-star text-warning"></i>
-                                                            <i class="fas fa-star text-warning"></i>
-                                                            <i class="fas fa-star text-warning"></i>
-                                                            <i class="far fa-star text-secondary"></i>
-                                                        </td>
-                                                        <td><a class="btn btn-warning waves-effect waves-light btn-sm" href="enroll.php?course=<?php echo $id;?>">Enroll<i class="mdi mdi-arrow-right ml-1"></i></a></div></td>
-                                                    </tr>
-                                                    <?php
-                                                        }
-                                                    ?>
+												<?php
+													$sqlcourses = "SELECT * FROM courses";
+													$courses = get_data($sqlcourses);
+													foreach($courses as $course){
+														$courseid = $course['id'];
+														$name = $course['name'];
+														$price = $course['price'];
+														$startdate = $course['date'];
+														?>
+                                                        <tr>
+                                                            <td><?php echo $name;?></td>
+                                                            <td><?php echo $price;?></td>
+                                                            <td><?php echo $startdate;?></td>
+                                                            <td><a class="btn btn-warning waves-effect waves-light btn-sm" href="view-course.php?course=<?php echo $courseid;?>">View Course<i class="mdi mdi-arrow-right ml-1"></i></a></div></td>
+                                                        </tr>
+														<?php
+													}
+												?>
                                                 </tbody>
+                                                <tfoot>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Price</th>
+                                                    <th>Date</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                                </tfoot>
                                             </table>
                                         </div>
                                     </div>
@@ -139,7 +141,14 @@ header("location:login.php");
 
 		</div>
 		<!-- /Main Wrapper -->
-
+        <script>
+            $(document).ready(function() {
+                $('#example').DataTable();
+            } );
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
 		<!-- jQuery -->
 		<script src="assets/js/jquery-3.5.1.min.js"></script>
 
