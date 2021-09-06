@@ -10,20 +10,25 @@
                     <a href="index.php"><i class="feather-home"></i><span>Dashboard</span></a>
                 </li>
                 <li>
-                    <a href="courses.php"><i class="fa fa-graduation-cap"></i><span>All Courses</span></a>
+                    <a href="courses.php"><i class="fa fa-graduation-cap"></i><span>Courses Management</span></a>
                 </li>
-                <!-- <li>
-                    <a href="mentor.html"><i class="feather-user"></i><span>Mentor</span></a>
+                <li>
+                    <a href="add-course.php"><i class="feather-list"></i><span>Add Course</span></a>
                 </li>
+                 <li class="dropdown">
+                    <a href="add-tutor.php"><i class="feather-user"></i><span>User Management</span></a>
+                </li>
+                <li>
+                    <a href="tutors.php"><i class="feather-disc"></i><span>Tutors</span></a>
+                </li>
+                <!--
                 <li>
                     <a href="mentee.html"><i class="feather-users"></i><span>Mentee</span></a>
                 </li>
                 <li>
                     <a href="booking-list.html"><i class="feather-list"></i><span>Booking List</span></a>
                 </li>
-                <li>
-                    <a href="categories.html"><i class="feather-disc"></i><span>Categories</span></a>
-                </li>
+                
                 <li>
                     <a href="transactions-list.html"><i class="feather-dollar-sign"></i><span>Transactions</span></a>
                 </li>

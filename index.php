@@ -328,7 +328,7 @@
 							</div>
 						</div>
 						<div class="section-btn m-auto">
-							<button class="btn btn-course">View all <i class="fas fa-caret-right right-nav-white"></i></button>
+							<a href="courses.php"><button class="btn btn-course">View all <i class="fas fa-caret-right right-nav-white"></i></button></a>
 						</div>
 					</div>
 				</div>

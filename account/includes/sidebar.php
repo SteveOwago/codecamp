@@ -12,6 +12,9 @@
                 <li>
                     <a href="my-courses.php"><i class="fa fa-graduation-cap"></i><span>My Courses</span></a>
                 </li>
+                <li>
+                    <a href="paid-enrolled-courses.php"><i class="feather-dollar-sign"></i><span>Enrolled/Paid Courses</span></a>
+                </li>
                 <!-- <li>
                     <a href="mentor.html"><i class="feather-user"></i><span>Mentor</span></a>
                 </li>

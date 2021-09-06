@@ -305,7 +305,8 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
     }
 
     function processMpesaStk(){
-
+        $course_id= escape($_POST['course_id']);
+        $email= escape($_POST['email']);
         $amount = escape($_POST['amount']);
         $phone = escape($_POST['phone']);
         $auth_url='https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';//replace sandbox with api for live
@@ -342,7 +343,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
             'PartyA'                 =>$phone,
             'PartyB'                 =>174379,
             'PhoneNumber'            =>$phone,
-            'CallBackURL'            =>'https://nariontechacademy.co.ke/callback.php',
+            'CallBackURL'            =>"https://fdcb-154-70-54-56.ngrok.io/codecamp/account/includes/callback2343sdteo0P.php?email=$email&courseID=$course_id&amount=$amount",
             'AccountReference'       =>'iEARN KENYA',
             'TransactionDesc'        =>'Fee Account'
 
@@ -359,8 +360,6 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
         if($curl_res){
             echo "<script>alert('Unlock your phone and enter your Mpesa Pin to finish the Transaction <br> Thank You');
                        window.location.href='../my-courses.php';</script>";
-            $_SESSION['course_id']= escape($_POST['course_id']);
-            $_SESSION['email']= escape($_POST['email']);
         }
     }
 
@@ -377,3 +376,39 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 //                       window.location.href='../my-courses.php';</script>";
 //        }
 //    }
+
+
+//Change user access Levels to Admin.
+
+if (isset($_GET['userID']))
+{
+    $user_id = $_GET['userID'];
+    updateUserToAdmin($user_id);
+}
+
+function updateUserToAdmin($user_id){
+    global $conn;
+    $sql= "UPDATE users SET `role_id`= 1 WHERE id =".$user_id;
+	$result=mysqli_query($conn,$sql);
+    if ($result){
+        echo "<script>alert('User Role Updated Successfully');
+        window.location.href='../add-tutor.php';</script>";
+    }
+}
+//Change user access Levels to Admin.
+
+if (isset($_GET['tutorID']))
+{
+    $tutor_id = $_GET['tutorID'];
+    updateUserToStudent($tutor_id);
+}
+
+function updateUserToStudent($tutor_id){
+    global $conn;
+    $sql= "UPDATE users SET `role_id`= 2 WHERE id =".$tutor_id;
+	$result=mysqli_query($conn,$sql);
+    if ($result){
+        echo "<script>alert('User Role Updated Successfully');
+        window.location.href='../tutors.php';</script>";
+    }
+}
