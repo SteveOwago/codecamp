@@ -89,6 +89,9 @@
             </div>
             <ul class="nav header-navbar-rht">
                 <li class="nav-item">
+                    <a class="nav-link header-register" href="enroll.php">Enroll Now</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link header-register" href="account/login.php">Login</a>
                 </li>
                 <li class="nav-item">

@@ -412,3 +412,26 @@ function updateUserToStudent($tutor_id){
         window.location.href='../tutors.php';</script>";
     }
 }
+
+//Change user access Levels to Admin.
+
+if (isset($_POST['enroll-student']))
+{
+    addStudentToCourse();
+}
+
+function addStudentToCourse(){
+    global $conn;
+    $email = escape($_POST['email']);
+    $course_id = escape($_POST['course_id']);
+    $amount = escape($_POST['amount']);
+    $sql= "INSERT INTO course_payments(`course_id`,`email`,`amount`) VALUES('$course_id','$email','$amount')";
+    $result=mysqli_query($conn,$sql);
+    if ($result){
+        echo "<script>alert('Student Enrolled Successfully');
+        window.location.href='../index.php';</script>";
+    }else{
+        echo "<script>alert('Failed! Unable to Enroll Student');
+        window.location.href='../add-student-to-course.php';</script>";
+    }
+}

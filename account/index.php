@@ -134,12 +134,12 @@ header("location:login.php");
 												<span class="dash-widget-icon text-warning bg-warning-light">
 												<i class="fas fa-star"></i>
 												</span>
-												<div class="dash-count">
-													<h3>485</h3>
-												</div>
+                                                <div class="dash-count">
+                                                    <a href="add-student-to-course.php" class="btn btn-outline-primary">Add Student to Course</a>
+                                                </div>
 											</div>
 											<div class="dash-widget-info">
-												<h6 class="text-muted">Total Sessions</h6>
+												<h6 class="text-muted">Add Student To Course</h6>
 												<div class="progress progress-sm">
 													<div class="progress-bar bg-warning w-50"></div>
 												</div>

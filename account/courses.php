@@ -73,7 +73,7 @@ header("location:login.php");
 														<p class="text-muted mb-0">Sessions</p>
 													</div>
 												</div>
-												<div class="mt-4"><a class="btn btn-primary waves-effect waves-light btn-sm" href="my-courses.php">My Courses <i class="mdi mdi-arrow-right ml-1"></i></a></div>
+												<div class="mt-4"><a class="btn btn-primary waves-effect waves-light btn-sm" href="add-course.php">Add Courses <i class="mdi mdi-arrow-right ml-1"></i></a></div>
 											</div>
 										</div>
 									</div>
@@ -183,39 +183,113 @@ header("location:login.php");
             include ('includes/sidebar.php');
             ?>
 
+            <!-- Page Wrapper -->
+            <div class="page-wrapper">
+                <div class="content container-fluid">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-12 col-md-6 offset-3">
+                            <div class="card">
+                                <div class="bg-soft-primary">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <div class="text-primary p-3">
+                                                <h5 class="text-primary">Welcome Back !</h5>
+                                                <p class="mb-3">Innovation Academy Admin Panel</p>
+                                            </div>
+                                        </div>
+                                        <div class="align-self-end col-5"><img src="assets/img/profile-img.png" alt="" class="img-fluid"></div>
+                                    </div>
+                                </div>
+                                <div class="pt-0 card-body">
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <div class="avatar-md profile-user mb-4"><img src="assets/img/profiles/avatar.png" alt="" class="img-thumbnail rounded-circle img-fluid"></div>
+                                            <div class="d-block">
+                                                <h5><?php echo htmlentities($_SESSION["email"]);?></h5>
+                                                <p class="text-muted mb-0  text-truncate">Administrator</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <div class="pt-4">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <h5 class="font-size-15"><?php
+                                                            $sqlcourses = "SELECT * FROM courses ORDER BY id ASC";
+                                                            $courses = get_data($sqlcourses);
+                                                            echo count($courses);
+                                                            ?></h5>
+                                                        <p class="text-muted mb-0">Courses</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <h5 class="font-size-15">120+</h5>
+                                                        <p class="text-muted mb-0">Sessions</p>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-4"><a class="btn btn-primary waves-effect waves-light btn-sm" href="courses.php">Add Courses <i class="mdi mdi-arrow-right ml-1"></i></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 col-sm-12 offset-2">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">All Courses List</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="example" class="table table-striped table-bordered" style="width:100%;padding: 15%;">
+                                            <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Price</th>
+                                                <th>Date</th>
+                                                <th>Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <?php
+                                            $sqlcourses = "SELECT * FROM courses";
+                                            $courses = get_data($sqlcourses);
+                                            foreach($courses as $course){
+                                            $courseid = $course['id'];
+                                            $name = $course['name'];
+                                            $price = $course['price'];
+                                            $startdate = $course['date'];
+                                            ?>
+                                            <tr>
+                                                <td><?php echo $name;?></td>
+                                                <td><?php echo $price;?></td>
+                                                <td><?php echo $startdate;?></td>
+                                                <td><a class="btn btn-warning waves-effect waves-light btn-sm" href="view-course.php?course=<?php echo $courseid;?>">View Course<i class="mdi mdi-arrow-right ml-1"></i></a></div></td>
+                                    </tr>
+                                    <?php
+                                    }
+                                    ?>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </tfoot>
+                                    </table>
+                                </div>
+                            </div>
 
-			<!-- Page Wrapper -->
-			<div class="page-wrapper">
-				<div class="content container-fluid">
-					<div class="row">
-						<div class="col-lg-12 col-sm-12 text-center">
-							<div class="row">
-								<div class="col-xl-6 col-sm-6 col-12 offset-3">
-									<div class="card">
-										<div class="card-body">
-											<div class="dash-widget-header">
-												<span class="dash-widget-icon text-danger bg-danger-light">
-												<i class="fas fa-user"></i>
-												</span>
-												<div class="text-center">
-													<h3>&emsp; Unauthorised User</h3>
-												</div>
-											</div>
-											<div class="dash-widget-info">
-												<h6 class="text-muted"><a href="index.php" class="btn btn-secondary"><i class="fa fa-arrow-left"></i> Back Home</a> You are not Authorised to Access this page!</h6>
-												<div class="progress progress-sm">
-													<div class="progress-bar bg-danger w-100"></div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /Page Wrapper -->
+                        </div>
+                        <!-- /Recent Orders -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            <!-- /Page Wrapper -->
 
 		</div>
 		<!-- /Main Wrapper -->

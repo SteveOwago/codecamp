@@ -74,7 +74,7 @@
 																<p class="text-muted mb-0">Sessions</p>
 															</div>
 														</div>
-														<div class="mt-4"><a class="btn btn-primary waves-effect waves-light btn-sm" href="my-courses.php">My Courses <i class="mdi mdi-arrow-right ml-1"></i></a></div>
+														<div class="mt-4"><a class="btn btn-primary waves-effect waves-light btn-sm" href="courses.php">Courses <i class="mdi mdi-arrow-right ml-1"></i></a></div>
 													</div>
 												</div>
 											</div>

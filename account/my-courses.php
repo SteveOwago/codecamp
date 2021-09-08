@@ -202,7 +202,7 @@ header("location:login.php");
 														</td>
 														<td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $id; ?>"> <i class="fa fa-coins"></i> Pay </button>
 														<div class="modal fade" id="exampleModal<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-														<form action="includes/functions.php" method="post" class="form-horizontal">
+<!--														<form action="includes/functions.php" method="post" class="form-horizontal">-->
 															<div class="modal-dialog" role="document">
 																	<div class="modal-content">
 																		<div class="modal-header">
@@ -214,22 +214,27 @@ header("location:login.php");
 																	
 																		<div class="modal-body">
 																			<p>Course: <?php echo htmlentities($name); ?></p>
-																			<div class="form-group">
-																				<label for="phone">Phone</label>
-                                                                                <input type="hidden" name="course_id" value="<?php echo $id;?>">
-                                                                                <input type="hidden" name="email" value="<?php echo $email;?>">
-																				<input type="hidden" name="amount" value="<?php echo $price;?>">
-																				<input type="number" class="form-control" name="phone" placeholder="2547xxxxxxxx">
-																			</div>
+<!--																			<div class="form-group">-->
+<!--																				<label for="phone">Phone</label>-->
+<!--                                                                                <input type="hidden" name="course_id" value="--><?php //echo $id;?><!--">-->
+<!--                                                                                <input type="hidden" name="email" value="--><?php //echo $email;?><!--">-->
+<!--																				<input type="hidden" name="amount" value="--><?php //echo $price;?><!--">-->
+<!--																				<input type="number" class="form-control" name="phone" placeholder="2547xxxxxxxx">-->
+<!--																			</div>-->
+                                                                            <p><strong>MPESA PAYBILL: </strong>522522</p>
+                                                                            <p><strong>ACCOUNT: </strong>Your Name</p>
+                                                                            <p>Please Pay the Amount Posted Above</p>
+                                                                            <p>Send Us the Mpesa Payment Message To: 070063323 | 0725858725</p>
 																		</div>
 																		<div class="modal-footer">
 																			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-																			<input type="submit" name="submit-payment" class="btn btn-success" value="Submit">
+<!--																			<input type="submit" name="submit-payment" class="btn btn-success" value="Submit">-->
 																		</div>
 																	
 																	</div>
 															</div>
-														</form></td>
+<!--														</form>-->
+                                                        </td>
 													</tr>
 												<?php
 														}
