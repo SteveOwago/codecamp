@@ -343,7 +343,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
             'PartyA'                 =>$phone,
             'PartyB'                 =>174379,
             'PhoneNumber'            =>$phone,
-            'CallBackURL'            =>"https://fdcb-154-70-54-56.ngrok.io/codecamp/account/includes/callback2343sdteo0P.php?email=$email&courseID=$course_id&amount=$amount",
+            'CallBackURL'            =>"https://innovationacademy.africa/account/includes/callback2343sdteo0P.php?email=$email&courseID=$course_id&amount=$amount",
             'AccountReference'       =>'iEARN KENYA',
             'TransactionDesc'        =>'Fee Account'
 

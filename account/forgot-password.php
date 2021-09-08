@@ -35,7 +35,7 @@ VALUES ('".$email."', '".$key."', '".$expDate."');");
         $output='<p>Dear user,</p>';
         $output.='<p>Please click on the following link to reset your password.</p>';
         $output.='<p>-------------------------------------------------------------</p>';
-        $output.='<p><a href="https://localhost/php/codecamp/account/reset-password.php?key='.$key.'&email='.$email.'&action=reset" target="_blank">
+        $output.='<p><a href="https://innovationacademy.africa/account/reset-password.php?key='.$key.'&email='.$email.'&action=reset" target="_blank">
 https://localhost/php/codecamp/account/reset-password.php?key='.$key.'&email='.$email.'&action=reset</a></p>';
         $output.='<p>-------------------------------------------------------------</p>';
         $output.='<p>Please be sure to copy the entire link into your browser.
