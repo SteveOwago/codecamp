@@ -42,6 +42,7 @@
 											$description = $session['description'];
 											$startdatetime = $session['startdatetime'];
 											$link = $session['link'];
+											$videolink = $session['video_link'];
 										}
 									?>
 									<div class="card-header">
@@ -52,6 +53,7 @@
 										<p class="card-text"><i class="fas fa-file-alt"></i>  <?php echo $description; ?> </p>
 										<p><strong><i class="fas fa-calendar-times"></i>  Date and Time: </strong><?php echo $startdatetime; ?></p>
 										<p><strong><i class="fas fa-link"></i>  Session Link: </strong><a class="text-primary" href="<?php echo $link; ?>" target="_blank"><?php echo $link; ?></a></p>
+										<p><strong><i class="fas fa-link"></i>  Video Link: </strong><a class="text-success" href="<?php echo $videolink; ?>" target="_blank"><?php echo $videolink; ?></a></p>
 										<div class="container">
 											<a href="edit-session.php?session=<?php echo $sessionid;?>" class="btn btn-sm btn-warning "> <i class="fas fa-pen-square"></i> Edit Session</a>
 											<a href="includes/functions.php?deleteSession=<?php echo $sessionid;?>" class="btn btn-sm btn-outline-danger float-right"><i class="fas fa-trash"></i> Delete Session</a>&emsp;
@@ -115,6 +117,7 @@
                                         $description = $session['description'];
                                         $startdatetime = $session['startdatetime'];
                                         $link = $session['link'];
+										$videolink = $session['video_link'];
                                     }
                                     ?>
                                     <div class="card-header">
@@ -125,7 +128,7 @@
                                         <p class="card-text"><i class="fas fa-file-alt"></i>  <?php echo $description; ?> </p>
                                         <p><strong><i class="fas fa-calendar-times"></i>  Date and Time: </strong><?php echo $startdatetime; ?></p>
                                         <p><strong><i class="fas fa-link"></i>  Session Link: </strong><a class="text-primary" href="<?php echo $link; ?>" target="_blank"><?php echo $link; ?></a></p>
-
+										<p><strong><i class="fas fa-link"></i>  Video Link: </strong><a class="text-success" href="<?php echo $videolink; ?>" target="_blank"><?php echo $videolink; ?></a></p>
                                     </div>
                                 </div>
                             </div>

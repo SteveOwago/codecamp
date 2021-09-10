@@ -213,7 +213,7 @@
 										</ul>
 									</div>
 									<div class="courses-amt ml-auto">
-										<h3 class="mb-0">KES:10,000</h3>
+										<h3 class="mb-0">KES:15,000</h3>
 									</div>
 								</div>
 							</div>
@@ -393,7 +393,7 @@
 										</ul>
 									</div>
 									<div class="courses-amt ml-auto">
-										<h3 class="mb-0">KES:12,000</h3>
+										<h3 class="mb-0">KES:15,000</h3>
 									</div>
 								</div>
 							</div>

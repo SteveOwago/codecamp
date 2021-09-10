@@ -233,8 +233,9 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 		$description = escape($_POST['description']);
 		$startdatetime = escape($_POST['startdatetime']);
 		$link = escape($_POST['link']);
-		
-		$sql= "UPDATE sessions SET `name`='$name',`description`='$description',`startdatetime`='$startdatetime',`link`='$link' WHERE id =".$session_id;
+		$videolink = escape($_POST['video_link']);
+
+		$sql= "UPDATE sessions SET `name`='$name',`description`='$description',`startdatetime`='$startdatetime',`link`='$link',`video_link`='$videolink' WHERE id =".$session_id;
 		$result=mysqli_query($conn,$sql);
 		if($result == true){
 			echo "<script>

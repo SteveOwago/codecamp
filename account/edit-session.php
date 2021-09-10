@@ -41,6 +41,7 @@
 												$description = $session['description'];
 												$startdatetime = $session['startdatetime'];
 												$link = $session['link'];
+												$videolink = $session['video_link'];
 											}
 										?>
 										<div class="form-group">
@@ -59,6 +60,10 @@
 										<div class="form-group">
 											<label for="exampleFormControlInput1">Session Link</label>
 											<input type="text" name="link" value="<?php echo $link;?>" class="form-control" id="exampleFormControlInput1" placeholder="https://yourLiveLinkToTheSession.session" required>
+										</div>
+										<div class="form-group">
+											<label for="exampleFormControlInput1">Session Video Link</label>
+											<input type="text" name="video_link" value="<?php echo $videolink;?>" class="form-control" id="exampleFormControlInput1" placeholder="https://yourvideoLinkToTheSession.recording" required>
 										</div>
 										<div class="form-group">
 											<input type="submit" name="update-session" value="Update" class="form-control btn btn-success">
