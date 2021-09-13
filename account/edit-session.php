@@ -53,6 +53,10 @@
 											<textarea type="text" class="form-control"  name="description" placeholder="Start typing here..." id="exampleFormControlTextarea1" rows="5"><?php echo $description;?></textarea>
 										</div>
 										<div class="form-group">
+											<label for="exampleFormControlTextarea1"> Select File to Upload:</label>
+											<input type="file" name="file" class="form-control">
+										</div>
+										<div class="form-group">
 											<label for="exampleFormControlInput1">Start Date Time</label>
 											<input type="datetime-local" name="startdatetime" value="<?php echo $startdatetime;?>" class="form-control" id="exampleFormControlInput1" required>
 										</div>

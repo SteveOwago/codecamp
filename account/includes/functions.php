@@ -204,21 +204,49 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 		$description = escape($_POST['description']);
 		$startdatetime = escape($_POST['startdatetime']);
 		$link = escape($_POST['link']);
-		
-		$sql= "INSERT INTO sessions(`course_id`,`name`,`description`,`startdatetime`,`link`) VALUES('$course_id','$name','$description','$startdatetime','$link')";
-		$result=mysqli_query($conn,$sql);
-		if($result == true){
-			echo "<script>
-              alert('Session Created Succefully');
-              window.location.href='../view-course.php?course=$course_id';
-              
-        </script>";
-		}else{
-			echo "<script>
-              alert('Error Please Try Again Later');
-              window.location.href='../add-session.php?course=$course_id';
-        </script>";
+                // File upload path
+        $targetDir = "uploads/sessions/";
+        $temp = explode(".", $_FILES["file"]["name"]);
+        $fileName = round(microtime(true)) . '.' . end($temp);
+        $targetFilePath = $targetDir . $fileName;
+        $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+        if(!empty($_FILES["file"]["name"])){
+                $allowTypes = array('pptx','docx','doc','ppt','pdf');
+                if(in_array($fileType, $allowTypes)){
+                // Upload file to server
+                    if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
+                    $sql= "INSERT INTO sessions(`course_id`,`name`,`description`,`startdatetime`,`link`,`file`) VALUES('$course_id','$name','$description','$startdatetime','$link','$fileName')";
+                    $result=mysqli_query($conn,$sql);
+                    if($result == true){
+                    echo "<script>
+                    alert('Session Created Succefully');
+                    window.location.href='../view-course.php?course=$course_id';</script>";
+                    }else{
+                    echo "<script>
+                    alert('Error Please Try Again Later');
+                    window.location.href='../add-session.php?course=$course_id';
+                </script>";
+		            }
+                }
+            }
+        }else{
+            $sql= "INSERT INTO sessions(`course_id`,`name`,`description`,`startdatetime`,`link`) VALUES('$course_id','$name','$description','$startdatetime','$link')";
+            $result=mysqli_query($conn,$sql);
+            if($result == true){
+                echo "<script>
+                alert('Session Created Succefully');
+                window.location.href='../view-course.php?course=$course_id';
+                
+            </script>";
+            }else{
+                echo "<script>
+                alert('Error Please Try Again Later');
+                window.location.href='../add-session.php?course=$course_id';
+            </script>";
 		}
+        }
+		
+		
 	}
 	
 	// Function Update Session
@@ -229,26 +257,51 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 	function updateSession(){
 		global $conn;
 		$session_id = escape($_POST['id']);
+        $getdata = "SELECT * FROM sessions WHERE id=".$session_id;
+        $results = get_data($getdata);
+        foreach ($results as $result) {
+            $targetDir = "uploads/sessions/";
+            $fileName = $result['file'];
+            unlink($targetDir.$fileName);
+        }
 		$name = escape($_POST['name']);
 		$description = escape($_POST['description']);
 		$startdatetime = escape($_POST['startdatetime']);
 		$link = escape($_POST['link']);
 		$videolink = escape($_POST['video_link']);
 
-		$sql= "UPDATE sessions SET `name`='$name',`description`='$description',`startdatetime`='$startdatetime',`link`='$link',`video_link`='$videolink' WHERE id =".$session_id;
-		$result=mysqli_query($conn,$sql);
-		if($result == true){
-			echo "<script>
-              alert('Session Edited Succefully');
-              window.location.href='../view-session.php?session=$session_id';
-              
-        </script>";
-		}else{
-			echo "<script>
-              alert('Error Please Try Again Later');
-              window.location.href='../view-session.php?session=$session_id';
-        </script>";
-		}
+        $targetDir = "uploads/sessions/";
+        $temp = explode(".", $_FILES["file"]["name"]);
+        $fileNameEdit = round(microtime(true)) . '.' . end($temp);
+        $targetFilePath = $targetDir . $fileName;
+        $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+        if(!empty($_FILES["file"]["name"])){
+                $allowTypes = array('pptx','docx','doc','ppt','pdf');
+                if(in_array($fileType, $allowTypes)){
+                // Upload file to server
+                    if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
+                        $sql= "UPDATE sessions SET `name`='$name',`description`='$description',`startdatetime`='$startdatetime',`link`='$link',`video_link`='$videolink',`file`='$fileNameEdit' WHERE id =".$session_id;
+                        $result=mysqli_query($conn,$sql);
+                        if($result == true){
+                            echo "<script>
+                            alert('Session Edited Succefully');
+                            window.location.href='../view-session.php?session=$session_id';
+                            
+                        </script>";
+                        }else{
+                            echo "<script>
+                            alert('Error Please Try Again Later');
+                            window.location.href='../view-session.php?session=$session_id';
+                        </script>";
+                        }
+                    }else{
+                        echo "<script>
+                        alert('Check Your file type!');
+                        window.location.href='../view-session.php?session=$session_id';
+                    </script>";
+                    }
+                }
+            }
 	}
 	
 	//Delete Session
@@ -273,20 +326,28 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 	//Delete Session
 	if (isset($_GET['deleteSession'])){
 		$id = $_GET['deleteSession'];
-		$sql = "DELETE FROM sessions WHERE id=".$id;
-		$delete = delete($sql);
-		if($delete == true){
-			echo "<script>
-              alert('Session Deleted Succefully');
-              window.location.href='../index.php';
-              
-        </script>";
-		}else{
-			echo "<script>
-              alert('Session Not Deleted');
-              window.location.href='../index.php';
-        </script>";
-		}
+        $getdata = "SELECT * FROM sessions WHERE id=".$id;
+        $results = get_data($getdata);
+        foreach ($results as $result) {
+            $targetDir = "uploads/sessions/";
+            $fileName = $result['file'];
+            if(unlink($targetDir.$fileName)){
+                $sql = "DELETE FROM sessions WHERE id=".$id;
+                $delete = delete($sql);
+                if($delete == true){
+                    echo "<script>
+                    alert('Session Deleted Succefully');
+                    window.location.href='../index.php';
+                    
+                </script>";
+                }else{
+                    echo "<script>
+                    alert('Session Not Deleted');
+                    window.location.href='../index.php';
+                </script>";
+                }
+            }
+        }
 		
 	}
 //Delete Function

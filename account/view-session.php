@@ -43,6 +43,7 @@
 											$startdatetime = $session['startdatetime'];
 											$link = $session['link'];
 											$videolink = $session['video_link'];
+											$sessionfile = $session['file'];
 										}
 									?>
 									<div class="card-header">
@@ -51,6 +52,7 @@
 									<div class="card-body">
 										<h5 class="card-title">Session Description</h5>
 										<p class="card-text"><i class="fas fa-file-alt"></i>  <?php echo $description; ?> </p>
+										<p><strong><i class="fas fa-link"></i>  Reading Material(s): </strong><a class="text-primary" href="<?php echo 'includes/uploads/sessions/'.$sessionfile; ?>" target="_blank"><?php echo $sessionfile; ?></a></p>
 										<p><strong><i class="fas fa-calendar-times"></i>  Date and Time: </strong><?php echo $startdatetime; ?></p>
 										<p><strong><i class="fas fa-link"></i>  Session Link: </strong><a class="text-primary" href="<?php echo $link; ?>" target="_blank"><?php echo $link; ?></a></p>
 										<p><strong><i class="fas fa-link"></i>  Video Link: </strong><a class="text-success" href="<?php echo $videolink; ?>" target="_blank"><?php echo $videolink; ?></a></p>
@@ -118,6 +120,7 @@
                                         $startdatetime = $session['startdatetime'];
                                         $link = $session['link'];
 										$videolink = $session['video_link'];
+										$sessionfile = $session['file'];
                                     }
                                     ?>
                                     <div class="card-header">
@@ -126,6 +129,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Session Description</h5>
                                         <p class="card-text"><i class="fas fa-file-alt"></i>  <?php echo $description; ?> </p>
+										<p><strong><i class="fas fa-link"></i>  Reading Material(s): </strong><a class="text-primary" href="<?php echo 'includes/uploads/sessions/'.$sessionfile; ?>" target="_blank"><?php echo $sessionfile; ?></a></p>
                                         <p><strong><i class="fas fa-calendar-times"></i>  Date and Time: </strong><?php echo $startdatetime; ?></p>
                                         <p><strong><i class="fas fa-link"></i>  Session Link: </strong><a class="text-primary" href="<?php echo $link; ?>" target="_blank"><?php echo $link; ?></a></p>
 										<p><strong><i class="fas fa-link"></i>  Video Link: </strong><a class="text-success" href="<?php echo $videolink; ?>" target="_blank"><?php echo $videolink; ?></a></p>

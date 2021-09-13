@@ -47,13 +47,33 @@
                                         <h3 class="card-title"><?php echo $title; ?></h3>
 									</div>
 									<div class="card-body">
-										<h5 class="card-title">Course Description</h5>
-										<p class="card-text"><?php echo $description; ?> </p>
-										<p><strong>Price: </strong>KES <?php echo $price; ?></p>
+										
+										<div class="container">
+											<div class="row">
+												<div class="col-sm-6">
+													<h5 class="card-title">Course Description</h5>
+													<p class="card-text"><?php echo $description; ?> </p>
+													<p><strong>Price: </strong>KES <?php echo $price; ?></p>
+												</div>
+												<div class="col-sm-6">
+													<p class="float-left"><strong>Number of Students: </strong><?php
+														global $conn;
+														$sqlstudents= "SELECT * FROM course_payments WHERE course_id = '$courseid'";
+														$resultcount = mysqli_query($conn,$sqlstudents);
+														$count = mysqli_num_rows($resultcount);
+														echo $count;
+													?> student(s)</p>
+												</div>
+											</div>
+											
+											
+										</div>
+										<br><br>
 										<div class="container">
 											<a href="add-session.php?course=<?php echo $courseid;?>" class="btn btn-sm btn-outline-success float-left"> <i class="fas fa-plus"></i> Add Session</a> &emsp;
 											<a href="edit-course.php?course=<?php echo $courseid;?>" class="btn btn-sm btn-warning "> <i class="fas fa-pen-square"></i> Edit Course</a>
 											<a href="includes/functions.php?deleteCourse=<?php echo $courseid;?>" class="btn btn-sm btn-outline-danger float-right"><i class="fas fa-trash"></i> Delete Course</a>&emsp;
+											
 										</div>
 									</div>
 								</div>
