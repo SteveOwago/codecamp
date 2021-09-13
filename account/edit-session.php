@@ -31,7 +31,7 @@
 							</div>
 							<div class="card-body">
 								<div style="padding: 3%;">
-									<form method="post" action="includes/functions.php">
+									<form method="post" action="includes/functions.php" enctype="multipart/form-data">
 										<?php
 											$sessionid = $_GET['session'];
 											$sqlsession = "SELECT * FROM sessions WHERE id =".$sessionid;

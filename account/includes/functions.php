@@ -260,9 +260,10 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
         $getdata = "SELECT * FROM sessions WHERE id=".$session_id;
         $results = get_data($getdata);
         foreach ($results as $result) {
-            $targetDir = "uploads/sessions/";
+            $targetDir1 = "uploads/sessions/";
             $fileName = $result['file'];
-            unlink($targetDir.$fileName);
+
+            unlink($targetDir1.$fileName);
         }
 		$name = escape($_POST['name']);
 		$description = escape($_POST['description']);
@@ -273,7 +274,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
         $targetDir = "uploads/sessions/";
         $temp = explode(".", $_FILES["file"]["name"]);
         $fileNameEdit = round(microtime(true)) . '.' . end($temp);
-        $targetFilePath = $targetDir . $fileName;
+        $targetFilePath = $targetDir . $fileNameEdit;
         $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
         if(!empty($_FILES["file"]["name"])){
                 $allowTypes = array('pptx','docx','doc','ppt','pdf');
@@ -329,9 +330,12 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
         $getdata = "SELECT * FROM sessions WHERE id=".$id;
         $results = get_data($getdata);
         foreach ($results as $result) {
-            $targetDir = "uploads/sessions/";
+            $targetDir1 = "uploads/sessions/";
             $fileName = $result['file'];
-            if(unlink($targetDir.$fileName)){
+
+            $deletefile=unlink($targetDir1.$fileName);
+        }
+            if($deletefile == true){
                 $sql = "DELETE FROM sessions WHERE id=".$id;
                 $delete = delete($sql);
                 if($delete == true){
@@ -347,7 +351,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
                 </script>";
                 }
             }
-        }
+        
 		
 	}
 //Delete Function
