@@ -347,7 +347,7 @@ header("location:login.php");
 												<i class="fas fa-user"></i>
 												</span>
 												<div class="dash-count">
-													<h3>168</h3>
+													<h3>200+</h3>
 												</div>
 											</div>
 											<div class="dash-widget-info">
@@ -371,7 +371,7 @@ header("location:login.php");
 												</div>
 											</div>
 											<div class="dash-widget-info">
-												<h6 class="text-muted">Appointments</h6>
+												<h6 class="text-muted">Sessions</h6>
 												<div class="progress progress-sm">
 													<div class="progress-bar bg-success w-50"></div>
 												</div>
@@ -387,11 +387,11 @@ header("location:login.php");
 												<i class="fas fa-star"></i>
 												</span>
 												<div class="dash-count">
-													<h3>485</h3>
+													<h3>2K+</h3>
 												</div>
 											</div>
 											<div class="dash-widget-info">
-												<h6 class="text-muted">Progress Points</h6>
+												<h6 class="text-muted">Training Hours</h6>
 												<div class="progress progress-sm">
 													<div class="progress-bar bg-warning w-50"></div>
 												</div>

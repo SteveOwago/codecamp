@@ -42,7 +42,7 @@
 
         <li class="nav-item dropdown has-arrow main-drop ml-3">
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-						<span class="user-img"><img src="assets/img/profiles/avatar.png" alt="">Student
+						<span class="user-img"><img src="assets/img/profiles/avatar.png" alt="">Account
 						<span class="status online"></span></span>
             </a>
             <div class="dropdown-menu">

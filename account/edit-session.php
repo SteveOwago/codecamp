@@ -54,7 +54,7 @@
 										</div>
 										<div class="form-group">
 											<label for="exampleFormControlTextarea1"> Select File to Upload:</label>
-											<input type="file" name="file" class="form-control">
+											<input type="file" name="file" class="form-control" required>
 										</div>
 										<div class="form-group">
 											<label for="exampleFormControlInput1">Start Date Time</label>

@@ -31,7 +31,7 @@
 							</div>
 							<div class="card-body">
 								<div style="padding: 3%;">
-									<form method="post" action="includes/functions.php">
+									<form method="post" action="includes/functions.php" enctype="multipart/form-data">
 										<?php
 											$courseid = $_GET['course'];
 											$sqlcourses = "SELECT * FROM courses WHERE id =".$courseid;
@@ -50,6 +50,10 @@
 										<div class="form-group">
 											<label for="exampleFormControlTextarea1">Course Description</label>
 											<textarea class="form-control"  name="description" placeholder="Start typing here..." id="exampleFormControlTextarea1" rows="5" required><?php echo $description;?></textarea>
+										</div>
+										<div class="form-group">
+											<label for="exampleFormControlTextarea1"> Select Couse Outline File to Upload:</label>
+											<input type="file" name="file" class="form-control" required>
 										</div>
 										<div class="form-group">
 											<label for="exampleFormControlInput1">Start Date</label>

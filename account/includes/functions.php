@@ -145,21 +145,60 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 		$description = escape($_POST['description']);
 		$startdate = escape($_POST['date']);
 		$price = escape($_POST['price']);
+
+        $targetDir = "uploads/courses/";
+        $temp = explode(".", $_FILES["file"]["name"]);
+        $fileName = round(microtime(true)) . '.' . end($temp);
+        $targetFilePath = $targetDir . $fileName;
+        $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+        if(!empty($_FILES["file"]["name"])){
+                $allowTypes = array('pptx','docx','doc','ppt','pdf');
+                if(in_array($fileType, $allowTypes)){
+                // Upload file to server
+                    if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
 		
-		$sql= "INSERT INTO courses(`name`,`description`,`date`,`price`) VALUES('$name','$description','$startdate','$price')";
-		$result=mysqli_query($conn,$sql);
-		if($result == true){
-			echo "<script>
-              alert('Course Created Succefully');
-              window.location.href='../index.php';
-              
-        </script>";
-		}else{
-			echo "<script>
-              alert('Error Please Try Again Later');
-              window.location.href='../index.php';
-        </script>";
-		}
+                        $sql= "INSERT INTO courses(`name`,`description`,`date`,`price`,`course_outline`) VALUES('$name','$description','$startdate','$price','$fileName')";
+                        $result=mysqli_query($conn,$sql);
+                        if($result == true){
+                            echo "<script>
+                            alert('Course Created Succefully');
+                            window.location.href='../index.php';
+                            
+                        </script>";
+                        }else{
+                            echo "<script>
+                            alert('Error Please Try Again Later');
+                            window.location.href='../index.php';
+                        </script>";
+                        }
+                    }else{
+                        echo "<script>
+                        alert('File not Uploaded');
+                        window.location.href='../index.php';
+                    </script>";
+                    }
+                }else{
+                    echo "<script>
+                        alert('Incorect File Type..consider pdf,doc,dox,pptx,ppt');
+                        window.location.href='../index.php';
+                    </script>";
+                }
+        }else{
+            $sql= "INSERT INTO courses(`name`,`description`,`date`,`price`) VALUES('$name','$description','$startdate','$price')";
+            $result=mysqli_query($conn,$sql);
+            if($result == true){
+                echo "<script>
+                alert('Course Created Succefully');
+                window.location.href='../index.php';
+                
+            </script>";
+            }else{
+                echo "<script>
+                alert('Error Please Try Again Later');
+                window.location.href='../index.php';
+            </script>";
+            }
+        }
 	}
 	
 	// Function Update Session
@@ -174,21 +213,69 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 		$description = escape($_POST['description']);
 		$startdate = escape($_POST['date']);
 		$price = escape($_POST['price']);
-		
-		$sql= "UPDATE courses SET `name`='$name',`description`='$description',`date`='$startdate',`price`='$price' WHERE id =".$course_id;
-		$result=mysqli_query($conn,$sql);
-		if($result == true){
-			echo "<script>
-              alert('Session Edited Succefully');
-              window.location.href='../view-course.php?course=$course_id';
-              
-        </script>";
-		}else{
-			echo "<script>
-              alert('Error Please Try Again Later');
-              window.location.href='../view-course.php?course=$course_id';
-        </script>";
-		}
+
+        //Fetch and Delete existing file before editing
+        $getdata = "SELECT * FROM courses WHERE id=".$course_id;
+        $results = get_data($getdata);
+        foreach ($results as $result) {
+            $targetDir1 = "uploads/courses/";
+            $fileName = $result['course_outline'];
+
+            unlink($targetDir1.$fileName);
+        }
+
+        $targetDir = "uploads/courses/";
+        $temp = explode(".", $_FILES["file"]["name"]);
+        $fileNameEdit = round(microtime(true)) . '.' . end($temp);
+        $targetFilePath = $targetDir . $fileNameEdit;
+        $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+        if(!empty($_FILES["file"]["name"])){
+                $allowTypes = array('pptx','docx','doc','ppt','pdf');
+                if(in_array($fileType, $allowTypes)){
+                // Upload file to server
+                    if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
+                        $sql= "UPDATE courses SET `name`='$name',`description`='$description',`date`='$startdate',`price`='$price', `course_outline`='$fileNameEdit' WHERE id =".$course_id;
+                        $result=mysqli_query($conn,$sql);
+                        if($result == true){
+                            echo "<script>
+                            alert('Course Edited Succefully');
+                            window.location.href='../view-course.php?course=$course_id';
+                            
+                        </script>";
+                        }else{
+                            echo "<script>
+                            alert('Error Please Try Again Later');
+                            window.location.href='../view-course.php?course=$course_id';
+                        </script>";
+                        }
+                    }else{
+                        echo "<script>
+                            alert('Course Outline File Not Uploaded');
+                            window.location.href='../view-course.php?course=$course_id';
+                        </script>";
+                    }
+                }else{
+                    echo "<script>
+                        alert('Incorect File Type..consider pdf,doc,dox,pptx,ppt');
+                        window.location.href='../index.php';
+                    </script>";
+                }
+            }else{
+                $sql= "UPDATE courses SET `name`='$name',`description`='$description',`date`='$startdate',`price`='$price' WHERE id =".$course_id;
+                        $result=mysqli_query($conn,$sql);
+                        if($result == true){
+                            echo "<script>
+                            alert('Course Edited Succefully');
+                            window.location.href='../view-course.php?course=$course_id';
+                            
+                        </script>";
+                        }else{
+                            echo "<script>
+                            alert('Error Please Try Again Later');
+                            window.location.href='../view-course.php?course=$course_id';
+                        </script>";
+                        }
+            }
 	}
 	
 	
@@ -277,7 +364,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
         $targetFilePath = $targetDir . $fileNameEdit;
         $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
         if(!empty($_FILES["file"]["name"])){
-                $allowTypes = array('pptx','docx','doc','ppt','pdf');
+                $allowTypes = array('pptx','docx','doc','ppt','pdf','csv');
                 if(in_array($fileType, $allowTypes)){
                 // Upload file to server
                     if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
@@ -301,6 +388,11 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
                         window.location.href='../view-session.php?session=$session_id';
                     </script>";
                     }
+                }else{
+                    echo "<script>
+                    alert('Check Your file type!');
+                    window.location.href='../view-session.php?session=$session_id';
+                </script>";
                 }
             }
 	}
@@ -308,6 +400,28 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 	//Delete Session
 	if (isset($_GET['deleteCourse'])){
 		$id = $_GET['deleteCourse'];
+        //Fetch and Delete existing file before editing
+        $getdata = "SELECT * FROM courses WHERE id=".$id;
+        $results = get_data($getdata);
+        foreach ($results as $result) {
+            $targetDir1 = "uploads/courses/";
+            $fileName = $result['course_outline'];
+
+            unlink($targetDir1.$fileName);
+        }
+        // Delete Associated Sessions
+        $getdata = "SELECT * FROM sessions WHERE course_id=".$id;
+        $results = get_data($getdata);
+        foreach ($results as $result) {
+            $targetDir2 = "uploads/sessions/";
+            $fileName2 = $result['file'];
+
+            $deletefile=unlink($targetDir2.$fileName2);
+            if($deletefile == true){
+                $sql = "DELETE FROM sessions WHERE course_id=".$id;
+                $delete = delete($sql);
+            }
+        }
 		$sql = "DELETE FROM courses WHERE id=".$id;
 		$delete = delete($sql);
 		if($delete == true){

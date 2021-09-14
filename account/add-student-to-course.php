@@ -36,7 +36,7 @@ if(!isset($_SESSION["email"]))
             <div class="page-wrapper">
                 <div class="content container-fluid">
                     <div class="row">
-                        <div class="col-lg-4 col-sm-12 col-md-6 offset-3">
+                        <div class="col-lg-6 col-sm-12 col-md-6 offset-3">
                             <div class="card">
                                 <div class="bg-soft-primary">
                                     <div class="row">
@@ -83,7 +83,7 @@ if(!isset($_SESSION["email"]))
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-8 col-sm-12 offset-2">
+                        <div class="col-lg-10 col-sm-12 offset-2">
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title">All Users</h4>

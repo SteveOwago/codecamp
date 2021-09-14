@@ -41,6 +41,7 @@
 											$title = $course['name'];
 											$description = $course['description'];
 											$price = $course['price'];
+											$courseoutline = $course['course_outline'];
 										}
 									?>
 									<div class="card-header">
@@ -53,6 +54,7 @@
 												<div class="col-sm-6">
 													<h5 class="card-title">Course Description</h5>
 													<p class="card-text"><?php echo $description; ?> </p>
+													<p><strong><i class="fas fa-book"></i>  Course Outline: </strong><a class="text-primary" href="<?php echo 'includes/uploads/courses/'.$courseoutline; ?>" target="_blank"><?php echo $courseoutline; ?></a></p>
 													<p><strong>Price: </strong>KES <?php echo $price; ?></p>
 												</div>
 												<div class="col-sm-6">
