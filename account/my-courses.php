@@ -222,8 +222,8 @@ header("location:login.php");
 <!--																				<input type="number" class="form-control" name="phone" placeholder="2547xxxxxxxx">-->
 <!--																			</div>-->
                                                                             <p><strong>MPESA PAYBILL: </strong>522522</p>
-                                                                            <p><strong>ACCOUNT: </strong>Your Name</p>
-                                                                            <p>Please Pay the Amount Posted Above</p>
+                                                                            <p><strong>ACCOUNT: </strong>1226688136</p>
+                                                                            <p><strong> AMOUNT:</strong> KES <?php echo htmlentities($price); ?></p>
                                                                             <p>Send Us the Mpesa Payment Message To: 070063323 | 0725858725</p>
 																		</div>
 																		<div class="modal-footer">

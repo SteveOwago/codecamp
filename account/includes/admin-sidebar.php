@@ -21,10 +21,11 @@
                 <li>
                     <a href="tutors.php"><i class="feather-disc"></i><span>Tutors</span></a>
                 </li>
-                <!--
                 <li>
-                    <a href="mentee.html"><i class="feather-users"></i><span>Mentee</span></a>
+                    <a href="registered-users.php"><i class="feather-users"></i><span>Applicants</span></a>
                 </li>
+                <!--
+                
                 <li>
                     <a href="booking-list.html"><i class="feather-list"></i><span>Booking List</span></a>
                 </li>
