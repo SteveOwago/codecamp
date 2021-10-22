@@ -154,7 +154,11 @@ if(!isset($_SESSION["email"]))
                         </div>
                     </div>
                     <div class="row">
+<<<<<<< Updated upstream
                         <div class="col-lg-10 col-sm-12 offset-1">
+=======
+                        <div class="col-lg-10 col-sm-12 offset-2">
+>>>>>>> Stashed changes
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title">All Courses List</h4>
