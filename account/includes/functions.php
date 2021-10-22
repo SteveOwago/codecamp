@@ -286,11 +286,11 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 	
 	function addSession(){
 		global $conn;
-		$course_id = escape($_POST['course_id']);
-		$name = escape($_POST['name']);
-		$description = escape($_POST['description']);
-		$startdatetime = escape($_POST['startdatetime']);
-		$link = escape($_POST['link']);
+		$course_id =  htmlspecialchars(escape($_POST['course_id']));
+		$name =  htmlspecialchars(escape($_POST['name']));
+		$description =  htmlspecialchars(escape($_POST['description']));
+		$startdatetime =  htmlspecialchars(escape($_POST['startdatetime']));
+		$link =  htmlspecialchars(escape($_POST['link']));
                 // File upload path
         $targetDir = "uploads/sessions/";
         $temp = explode(".", $_FILES["file"]["name"]);
@@ -343,7 +343,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 	
 	function updateSession(){
 		global $conn;
-		$session_id = escape($_POST['id']);
+		$session_id = htmlspecialchars(escape($_POST['id']));
         $getdata = "SELECT * FROM sessions WHERE id=".$session_id;
         $results = get_data($getdata);
         foreach ($results as $result) {
@@ -352,11 +352,11 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 
             unlink($targetDir1.$fileName);
         }
-		$name = escape($_POST['name']);
-		$description = escape($_POST['description']);
-		$startdatetime = escape($_POST['startdatetime']);
-		$link = escape($_POST['link']);
-		$videolink = escape($_POST['video_link']);
+		$name = htmlspecialchars(escape($_POST['name']));
+		$description = htmlspecialchars(escape($_POST['description']));
+		$startdatetime = htmlspecialchars(escape($_POST['startdatetime']));
+		$link = htmlspecialchars(escape($_POST['link']));
+		$videolink = htmlspecialchars(escape($_POST['video_link']));
 
         $targetDir = "uploads/sessions/";
         $temp = explode(".", $_FILES["file"]["name"]);
@@ -399,7 +399,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 	
 	//Delete Session
 	if (isset($_GET['deleteCourse'])){
-		$id = $_GET['deleteCourse'];
+		$id = htmlspecialchars($_GET['deleteCourse']);
         //Fetch and Delete existing file before editing
         $getdata = "SELECT * FROM courses WHERE id=".$id;
         $results = get_data($getdata);
@@ -440,7 +440,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 	}
 	//Delete Session
 	if (isset($_GET['deleteSession'])){
-		$id = $_GET['deleteSession'];
+		$id = htmlspecialchars($_GET['deleteSession']);
         $getdata = "SELECT * FROM sessions WHERE id=".$id;
         $results = get_data($getdata);
         foreach ($results as $result) {
@@ -485,10 +485,10 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
     }
 
     function processMpesaStk(){
-        $course_id= escape($_POST['course_id']);
-        $email= escape($_POST['email']);
-        $amount = escape($_POST['amount']);
-        $phone = escape($_POST['phone']);
+        $course_id= htmlspecialchars(escape($_POST['course_id']));
+        $email= htmlspecialchars(escape($_POST['email']));
+        $amount = htmlspecialchars(escape($_POST['amount']));
+        $phone = htmlspecialchars(escape($_POST['phone']));
         $auth_url='https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';//replace sandbox with api for live
         $stk_push_url='https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';//replace sandbox with api for live
         $stk_push_url='https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';//replace sandbox with api for live
@@ -562,7 +562,7 @@ $conn = mysqli_connect('localhost', 'root', '', 'codecamp');
 
 if (isset($_GET['userID']))
 {
-    $user_id = $_GET['userID'];
+    $user_id = htmlspecialchars($_GET['userID']);
     updateUserToAdmin($user_id);
 }
 
@@ -579,7 +579,7 @@ function updateUserToAdmin($user_id){
 
 if (isset($_GET['tutorID']))
 {
-    $tutor_id = $_GET['tutorID'];
+    $tutor_id = htmlspecialchars($_GET['tutorID']);
     updateUserToStudent($tutor_id);
 }
 
@@ -602,9 +602,9 @@ if (isset($_POST['enroll-student']))
 
 function addStudentToCourse(){
     global $conn;
-    $email = escape($_POST['email']);
-    $course_id = escape($_POST['course_id']);
-    $amount = escape($_POST['amount']);
+    $email = htmlspecialchars(escape($_POST['email']));
+    $course_id = htmlspecialchars(escape($_POST['course_id']));
+    $amount = htmlspecialchars(escape($_POST['amount']));
     $sql= "INSERT INTO course_payments(`course_id`,`email`,`amount`) VALUES('$course_id','$email','$amount')";
     $result=mysqli_query($conn,$sql);
     if ($result){
